@@ -125,8 +125,8 @@ Mobile: globe sits behind/below the copy at reduced opacity; copy remains fully 
 ### Implementation contract
 
 - **Canvas 2D, no three.js.** Points distributed on a sphere via Fibonacci lattice (~220 points desktop, ~120 mobile), rotated around the Y axis (~1 revolution / 60s), projected with simple perspective (`scale = f / (f + z)`). Points on the far hemisphere render at reduced alpha — this alone reads as 3D.
-- Connect each point to its 2–3 nearest neighbors _in projected space_ each frame with `--field-line` strokes; nodes are 1.5–2.5px dots in `--field-node`, ~18% in `--gold`.
-- **The man:** an SVG layer over the canvas — a minimal abstract standing figure (line-art: head circle + shoulder/torso strokes, no face, no detail) in `--gold`, ~15% of globe height, positioned at the lower-front of the globe. 2–3 static connection lines from the figure into the nearest nodes. It must read as _abstract geometry_, not an icon of a person. No religious posture (no raised cross-arms).
+- Connect each point to its 3 nearest neighbors _in 3D_, computed **once at seed** — the wireframe stays stable while the sphere turns (cheaper and reads better than per-frame projected-space matching). Edges use `--field-line` strokes; nodes are 1.5–2.5px dots in `--field-node`, ~18% in `--gold`.
+- **The man:** drawn in the same canvas — a minimal abstract standing figure (line-art: head circle + torso/limb strokes, no face, no detail) in `--gold`, ~15% of globe height, positioned at the lower-front of the globe, one arm raised toward the world. 2–3 faint threads from the raised hand to the nearest front nodes. It must read as _abstract geometry_, not an icon of a person. No religious posture (no raised cross-arms).
 - **Performance/a11y — inherit every rule from `NeuralField`:** DPR capped at 2, `ResizeObserver` resize, `IntersectionObserver` pauses the RAF loop off-screen, `prefers-reduced-motion` renders one static frame, colors re-read on theme change via `MutationObserver`.
 - Budget: the globe must hold 60fps on a mid-range phone. If it can't, cut point count — never add a spinner or loading state for decoration.
 
