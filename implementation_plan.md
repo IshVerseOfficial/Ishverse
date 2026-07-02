@@ -14,33 +14,31 @@ Present **IshVerse** — the company behind IshGospel and IshRize — and route 
 
 ## Scope
 
-| In scope (now)                                      | Out of scope (deferred)                                          |
-| --------------------------------------------------- | ---------------------------------------------------------------- |
-| Company landing page at `ishverse.com`              | Blog / news                                                      |
-| Company-wide `/privacy` + `/terms`                  | Careers, press pages                                             |
-| `rize.ishverse.com` coming-soon (subdomain rewrite) | Full IshRize product site (own repo later, like `ishgospel-web`) |
-| System + manual light/dark theme                    | Any logged-in functionality                                      |
-| Responsive, Lighthouse ≥ 95                         | Analytics beyond Vercel defaults                                 |
-| i18n (en/es/fr/pt) — later phase                    |                                                                  |
-
-**`ishgospel-web` is untouched.** Components are _copied_ from it (see DESIGN.md §8); no changes land there except one flagged item below.
+| In scope (now)                                            | Out of scope (deferred)          |
+| --------------------------------------------------------- | -------------------------------- |
+| Company landing page at `ishverse.com`                    | Blog / news                      |
+| Company-wide `/privacy` + `/terms`                        | Careers, press pages             |
+| `gospel.ishverse.com` product landing (subdomain rewrite) | Any logged-in functionality      |
+| `rize.ishverse.com` coming-soon (subdomain rewrite)       | Analytics beyond Vercel defaults |
+| System + manual light/dark theme                          |                                  |
+| Responsive, Lighthouse ≥ 95                               |                                  |
+| i18n (en/es/fr/pt) — later phase                          |                                  |
 
 ---
 
 ## Repos & domains
 
-| Repo (GitHub org: `IshVerseofficial`) | Deploys to                                                                                 |
-| ------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `ishverse-web` (this repo)            | `ishverse.com` + `rize.ishverse.com` (one Vercel project, two domains, middleware rewrite) |
-| `ishgospel-web` (existing, untouched) | `gospel.ishverse.com`                                                                      |
+**This is the only web repo.** One Vercel project serves the company site and every product landing page via subdomain rewrites (`middleware.ts`).
 
-### ⚠ Flagged dependency — the app's privacy links
+| Domain                | Serves                                    |
+| --------------------- | ----------------------------------------- |
+| `ishverse.com`        | Company site + company-wide legal pages   |
+| `gospel.ishverse.com` | IshGospel product landing (`app/gospel/`) |
+| `rize.ishverse.com`   | IshRize coming-soon (`app/rize/`)         |
 
-`ishgospel-frontend` (PrivacyScreen, SignUpScreen, app.json) and the Play Store listing point to **`gospel.ishverse.com/privacy`**, which does not exist in `ishgospel-web`. Resolution that respects "don't touch ishgospel-web":
+> **`ishgospel-web` is retired.** Its Phase 1 landing page was ported into `components/gospel/` + `app/gospel/` here (i18n stripped to English pending Phase 4). The repo should be archived on GitHub; its redirect config never shipped. Legal paths on product subdomains 308-redirect to `ishverse.com/privacy|terms` via `middleware.ts`.
 
-1. Legal pages are built **here** at `ishverse.com/privacy` + `ishverse.com/terms` (company-wide policy, the Adobe model).
-2. A **redirect** `gospel.ishverse.com/privacy → ishverse.com/privacy` (and `/terms`) is added to `ishgospel-web` — config-only (`next.config.ts` `redirects()`), no app code touched. This is the single permitted change to that repo.
-3. Play Store listing uses `https://ishverse.com/privacy` directly.
+The mobile app (`ishgospel-frontend`) and the Play Store listing use `https://ishverse.com/privacy` + `/terms` directly.
 
 ---
 
@@ -88,10 +86,12 @@ One phase = one issue = one `feature/*` branch = one squash-merged PR (per CONTR
 - Config-only redirect PR in `ishgospel-web` (flagged item above)
 - Update `ishgospel-docs/INFRASTRUCTURE.md` with final legal URLs
 
-### Phase 3 — rize.ishverse.com coming soon
+### Phase 3 — product subdomains ✅ (#5)
 
-- `middleware.ts` subdomain rewrite → `app/rize/` route group
-- One-screen page: IshRize wordmark, one paragraph, notify CTA (mailto `contact@ishverse.com` now; waitlist endpoint later if demand shows)
+- `middleware.ts` — subdomain rewrites (`gospel.*` → `/gospel`, `rize.*` → `/rize`), plus 308 redirects for `/privacy|/terms` on product subdomains → `ishverse.com`
+- `app/gospel/` + `components/gospel/` — full IshGospel product landing ported from the retired `ishgospel-web` repo (hero + AppPreview, pillars, formation engine, how it works, breaking habits, theme showcase, testimonial, final CTA + waitlist)
+- `app/api/waitlist/` — server-side forward to the Railway backend (`POST /api/v1/waitlist`)
+- `app/rize/` — one-screen coming-soon page (notify CTA via mailto; waitlist endpoint later if demand shows)
 
 ### Phase 4 — i18n
 
