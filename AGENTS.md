@@ -20,17 +20,17 @@ The **company site** for IshVerse — the parent brand behind IshGospel and IshR
 
 ## Sibling repos (GitHub org: IshVerseOfficial)
 
-| Repo                                       | What                                                                                                     |
-| ------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
-| `Ishverse`                                 | **This repo** — company site (`ishverse.com`)                                                            |
-| `ishgospel-web`                            | IshGospel product site (`gospel.ishverse.com`) — **do not modify**; copy components from it when porting |
-| `ishgospel-backend` / `ishgospel-frontend` | IshGospel API + mobile app                                                                               |
-| `ishgospel-docs`                           | Documentation source of truth                                                                            |
+| Repo                                       | What                                                                                                                                                                       |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Ishverse`                                 | **This repo** — company site (`ishverse.com`) + ALL product landing pages via subdomain rewrites: `gospel.ishverse.com` (`app/gospel/`), `rize.ishverse.com` (`app/rize/`) |
+| `ishgospel-web`                            | **Retired** — its landing page was ported into `components/gospel/` here. Do not deploy or extend it                                                                       |
+| `ishgospel-backend` / `ishgospel-frontend` | IshGospel API + mobile app                                                                                                                                                 |
+| `ishgospel-docs`                           | Documentation source of truth                                                                                                                                              |
 
 ## What this repo is (and is not)
 
-- **Is:** the company profile — brand story, product ecosystem, company-wide legal pages (`/privacy`, `/terms`), contact.
-- **Is not:** a product site. No auth, no backend calls, no waitlists (yet). Static, fast, SEO-first.
+- **Is:** the company profile — brand story, product ecosystem, company-wide legal pages (`/privacy`, `/terms`), contact — plus every product's marketing landing page, routed by subdomain in `middleware.ts`.
+- **Is not:** a logged-in product. No auth. The only backend call is the gospel waitlist forward (`app/api/waitlist/` → Railway). Static, fast, SEO-first.
 
 ## Stack
 
