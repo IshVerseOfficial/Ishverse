@@ -1,0 +1,91 @@
+/*
+ * Module: Global Styles & Design Tokens
+ * Context: See DESIGN.md §3 — color system (identical tokens to ishgospel-web).
+ *
+ * The IshVerse design system: pure black / pure white themes, blue (#0052FF)
+ * + soft gold (#A68A4C) accents. Light is the :root default; `.dark` (toggled
+ * by next-themes) overrides. Tokens are exposed to Tailwind via @theme inline
+ * so utilities like `bg-bg`, `text-fg-secondary`, `text-accent` resolve to the
+ * right value per theme. The --field-* variables feed the canvas layers
+ * (NeuralField, VerseGlobe).
+ */
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #ffffff;
+  --surface: #f5f5f5;
+  --fg: #1a1a1a;
+  --fg-secondary: #6b7280;
+  --divider: rgba(0, 0, 0, 0.08);
+  --glass-bg: rgba(0, 0, 0, 0.04);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --overlay-scrim: rgba(0, 0, 0, 0.5);
+
+  --accent: #0052ff;
+  --accent-dark: #0236a6;
+  --gold: #a68a4c;
+  --accent-on: #ffffff;
+
+  --success: #2f6b3a;
+  --warning: #8b6914;
+  --error: #6b2f2f;
+
+  --field-grid: rgba(0, 0, 0, 0.05);
+  --field-line: rgba(0, 82, 255, 0.32);
+  --field-node: rgba(0, 82, 255, 0.55);
+  --field-glow: rgba(0, 82, 255, 0.07);
+}
+
+.dark {
+  --bg: #000000;
+  --surface: #111111;
+  --fg: #ffffff;
+  --fg-secondary: #a1a1aa;
+  --divider: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --overlay-scrim: rgba(0, 0, 0, 0.65);
+
+  --field-grid: rgba(255, 255, 255, 0.04);
+  --field-line: rgba(91, 147, 255, 0.5);
+  --field-node: rgba(120, 165, 255, 0.85);
+  --field-glow: rgba(0, 82, 255, 0.18);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-fg-secondary: var(--fg-secondary);
+  --color-divider: var(--divider);
+  --color-glass-bg: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-gold: var(--gold);
+  --color-accent-on: var(--accent-on);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
