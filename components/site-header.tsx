@@ -18,6 +18,7 @@ import { siteConfig } from "@/lib/site";
 
 const NAV_LINKS = [
   { href: "#products", label: "Products" },
+  { href: "#story", label: "Story" },
   { href: "#contact", label: "Contact" },
 ] as const;
 

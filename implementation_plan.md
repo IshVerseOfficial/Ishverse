@@ -67,7 +67,7 @@ Identical to `ishgospel-web` — consistency is the point:
 
 One phase = one issue = one `feature/*` branch = one squash-merged PR (per CONTRIBUTING.md).
 
-### Phase 0 — Scaffold
+### Phase 0 — Scaffold ✅ (#1)
 
 - Next.js 16 + TS strict + Tailwind v4 scaffold; Node engine pinned like ishgospel-web
 - Port from ishgospel-web: `globals.css` tokens, `providers.tsx`, `theme-toggle`, `ui/section.tsx`, `neural-field.tsx`
@@ -75,7 +75,7 @@ One phase = one issue = one `feature/*` branch = one squash-merged PR (per CONTR
 - Tooling + CI + repo docs (`README.md`, `AGENTS.md`/`CLAUDE.md` pointing at DESIGN.md)
 - GitHub settings per CONTRIBUTING.md: `main` + `dev`, branch protection, squash-only, auto-delete branches
 
-### Phase 1 — VerseGlobe + full landing page
+### Phase 1 — VerseGlobe + full landing page ✅ (#2)
 
 - `verse-globe.tsx` per DESIGN.md §5 (the one genuinely new build)
 - `reveal.tsx` scroll-reveal wrapper
