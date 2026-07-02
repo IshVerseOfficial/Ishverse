@@ -82,7 +82,7 @@ One phase = one issue = one `feature/*` branch = one squash-merged PR (per CONTR
 - Sections: Hero · Ecosystem (`product-card.tsx`) · Philosophy · Principles · Contact · Footer
 - Copy per DESIGN.md §9; both themes verified; reduced-motion verified
 
-### Phase 2 — Legal pages
+### Phase 2 — Legal pages ✅ (#3)
 
 - `legal/prose.tsx` + `/privacy` + `/terms` (company-wide wording covering IshGospel data practices: account data, Bible activity, journaling, avatars/S3, Resend emails, deletion via support@ishverse.com)
 - Config-only redirect PR in `ishgospel-web` (flagged item above)
