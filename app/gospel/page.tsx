@@ -17,6 +17,7 @@ import { GospelSiteHeader } from "@/components/gospel/site-header";
 import { GospelSiteFooter } from "@/components/gospel/site-footer";
 import { GospelHero } from "@/components/gospel/sections/hero";
 import { GospelPillars } from "@/components/gospel/sections/pillars";
+import { GospelShowcase } from "@/components/gospel/sections/showcase";
 import { GospelFormationEngine } from "@/components/gospel/sections/formation-engine";
 import { GospelHowItWorks } from "@/components/gospel/sections/how-it-works";
 import { GospelBreakingHabits } from "@/components/gospel/sections/breaking-habits";
@@ -49,6 +50,7 @@ export default function GospelHome() {
         <GospelHero />
         <GospelPillars />
         <GospelFormationEngine />
+        <GospelShowcase />
         <GospelHowItWorks />
         <GospelBreakingHabits />
         <GospelThemeShowcase />

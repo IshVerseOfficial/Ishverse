@@ -93,6 +93,20 @@ One phase = one issue = one `feature/*` branch = one squash-merged PR (per CONTR
 - `app/api/waitlist/` — server-side forward to the Railway backend (`POST /api/v1/waitlist`)
 - `app/rize/` — one-screen coming-soon page (notify CTA via mailto; waitlist endpoint later if demand shows)
 
+### Phase 6 — gospel marketing showcase ✅ (#7)
+
+- Real app screenshots (`public/gospel/`, from `ishgospel-frontend/assets/AppScreenshots`) replace every CSS mock
+- `phone-frame.tsx` + `sections/showcase.tsx` — "Inside the app" alternating rows (Bible · Prayer & Journal · Vision & Formation) with scroll reveals
+- Hero shows the real Home screen (theme-aware: light screenshot in light mode, dark in dark); Breaking Habits gets the real habit screenshot; theme showcase uses the real light/dark Home screens
+
+### Phase 7 — gospel pricing (next)
+
+- Pricing section with the app paywall tiers (Free · Personal $4.99 · Family $9.99 · Church Lite $49 · Church Pro $199 per month), recommended plan highlighted, nav/footer `#pricing` links
+
+### Phase 8 — gospel conversion polish (planned)
+
+- FAQ, social proof, OG image, motion consistency, Lighthouse ≥ 95 on gospel.ishverse.com
+
 ### Phase 4 — i18n
 
 - `next-intl` wired like ishgospel-web; en/es/fr/pt messages

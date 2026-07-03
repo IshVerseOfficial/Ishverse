@@ -12,7 +12,7 @@
 
 import { ArrowRight, Languages, ShieldCheck, Smartphone, WifiOff } from "lucide-react";
 import { NeuralField } from "../../neural-field";
-import { AppPreview } from "../app-preview";
+import { PhoneFrame } from "../phone-frame";
 import { gospelConfig } from "@/lib/gospel";
 
 const TRUST = [
@@ -68,7 +68,21 @@ export function GospelHero() {
         </div>
 
         <div className="hidden justify-center lg:flex">
-          <AppPreview />
+          <div className="relative">
+            <div aria-hidden className="absolute -inset-10 rounded-full bg-accent/15 blur-3xl" />
+            <PhoneFrame
+              src="/gospel/home-light.png"
+              alt="The IshGospel home screen — verse of the day, formation score, and streak"
+              priority
+              className="relative dark:hidden"
+            />
+            <PhoneFrame
+              src="/gospel/home-dark.png"
+              alt="The IshGospel home screen — verse of the day, formation score, and streak"
+              priority
+              className="relative hidden dark:block"
+            />
+          </div>
         </div>
       </div>
     </section>

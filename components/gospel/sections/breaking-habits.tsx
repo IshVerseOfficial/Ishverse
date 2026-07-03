@@ -13,6 +13,8 @@
 
 import { BookMarked, HeartHandshake, Shield, ShieldBan } from "lucide-react";
 import { Section } from "../../ui/section";
+import { Reveal } from "../../reveal";
+import { PhoneFrame } from "../phone-frame";
 
 const POINTS = [
   {
@@ -36,7 +38,7 @@ export function GospelBreakingHabits() {
   return (
     <Section id="features" className="py-16 sm:py-24">
       <div className="grid items-center gap-12 rounded-3xl border border-accent/25 bg-accent/[0.06] p-8 sm:p-12 lg:grid-cols-2">
-        <div>
+        <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-3 py-1.5 text-[12px] font-medium text-accent-dark dark:text-accent">
             <Shield className="h-3.5 w-3.5" aria-hidden />
             Breaking Habits
@@ -48,24 +50,30 @@ export function GospelBreakingHabits() {
             Not a streak counter. A daily covenant — built on the verse you choose — that meets you
             the moment temptation hits, and a community that helps you rise again when you fall.
           </p>
-        </div>
+          <ul className="mt-8 space-y-3">
+            {POINTS.map((p) => (
+              <li
+                key={p.title}
+                className="flex items-start gap-4 rounded-2xl border border-divider bg-bg p-4"
+              >
+                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                  <p.icon className="h-5 w-5" aria-hidden />
+                </span>
+                <div>
+                  <p className="text-[14px] font-medium text-fg">{p.title}</p>
+                  <p className="mt-1 text-[13px] leading-relaxed text-fg-secondary">{p.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
 
-        <ul className="space-y-3">
-          {POINTS.map((p) => (
-            <li
-              key={p.title}
-              className="flex items-start gap-4 rounded-2xl border border-divider bg-bg p-4"
-            >
-              <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                <p.icon className="h-5 w-5" aria-hidden />
-              </span>
-              <div>
-                <p className="text-[14px] font-medium text-fg">{p.title}</p>
-                <p className="mt-1 text-[13px] leading-relaxed text-fg-secondary">{p.desc}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
+        <Reveal delay={60} className="flex justify-center">
+          <PhoneFrame
+            src="/gospel/habit.png"
+            alt="The IshGospel Breaking Habits screen with anchor verse and streak"
+          />
+        </Reveal>
       </div>
     </Section>
   );
