@@ -30,7 +30,7 @@ export default function RizeComingSoon() {
         <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-6xl">
           ISH<span className="font-normal text-fg-secondary">RIZE</span>
         </h1>
-        <p className="mt-2 text-sm font-medium text-gold">Coming soon</p>
+        <p className="mt-2 text-sm font-medium text-gold-text">Coming soon</p>
         <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-fg-secondary">
           A structured system for academic discipline. Same philosophy as IshGospel. Same design
           rigor. A different domain.

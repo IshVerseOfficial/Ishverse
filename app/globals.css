@@ -29,6 +29,11 @@
   --gold: #a68a4c;
   --accent-on: #ffffff;
 
+  /* WCAG-safe variants for small text (labels, eyebrows) — the raw accent
+     and gold fail 4.5:1 at small sizes on both pure white and pure black. */
+  --accent-text: #0236a6;
+  --gold-text: #7a6533;
+
   --success: #2f6b3a;
   --warning: #8b6914;
   --error: #6b2f2f;
@@ -49,6 +54,9 @@
   --glass-border: rgba(255, 255, 255, 0.15);
   --overlay-scrim: rgba(0, 0, 0, 0.65);
 
+  --accent-text: #78a5ff;
+  --gold-text: #c4a86a;
+
   --field-grid: rgba(255, 255, 255, 0.04);
   --field-line: rgba(91, 147, 255, 0.5);
   --field-node: rgba(120, 165, 255, 0.85);
@@ -67,6 +75,8 @@
   --color-accent-dark: var(--accent-dark);
   --color-gold: var(--gold);
   --color-accent-on: var(--accent-on);
+  --color-accent-text: var(--accent-text);
+  --color-gold-text: var(--gold-text);
   --color-success: var(--success);
   --color-warning: var(--warning);
   --color-error: var(--error);

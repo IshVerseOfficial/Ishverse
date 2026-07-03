@@ -63,7 +63,7 @@ export function ProductCard({ product }: { product: Product }) {
             </span>
           </>
         ) : (
-          <span className="rounded-full border border-divider px-3 py-1 text-[12px] text-gold">
+          <span className="rounded-full border border-divider px-3 py-1 text-[12px] text-gold-text">
             Coming soon
           </span>
         )}

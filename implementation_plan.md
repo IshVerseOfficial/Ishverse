@@ -99,13 +99,18 @@ One phase = one issue = one `feature/*` branch = one squash-merged PR (per CONTR
 - `phone-frame.tsx` + `sections/showcase.tsx` — "Inside the app" alternating rows (Bible · Prayer & Journal · Vision & Formation) with scroll reveals
 - Hero shows the real Home screen (theme-aware: light screenshot in light mode, dark in dark); Breaking Habits gets the real habit screenshot; theme showcase uses the real light/dark Home screens
 
-### Phase 7 — gospel pricing (next)
+### Phase 7 — gospel pricing ✅ (#8)
 
-- Pricing section with the app paywall tiers (Free · Personal $4.99 · Family $9.99 · Church Lite $49 · Church Pro $199 per month), recommended plan highlighted, nav/footer `#pricing` links
+- `sections/pricing.tsx` — mirrors the app paywall (SubscriptionPlansScreen): Free · Personal $4.99 (highlighted "Most popular") · Family $9.99, plus a churches band (Lite $49 · Pro $199 with contact CTA); nav/footer `#pricing` links. Keep in sync with the app paywall
 
-### Phase 8 — gospel conversion polish (planned)
+### Phase 8 — gospel conversion polish ✅ (#10)
 
-- FAQ, social proof, OG image, motion consistency, Lighthouse ≥ 95 on gospel.ishverse.com
+- `sections/faq.tsx` — native accordion + FAQPage JSON-LD (honest answers only)
+- `app/gospel/opengraph-image.tsx` — branded social card via next/og
+- Favicons: `app/icon.svg` (company constellation), `app/gospel/icon.png` (IshGospel mark) — fixed the site-wide favicon 404
+- Motion consistency: Reveal on all gospel sections
+- A11y: new `accent-text` / `gold-text` tokens (DESIGN.md §3) — raw accent/gold failed 4.5:1 at label sizes; hero stops preloading both theme screenshots
+- Lighthouse (local prod build): a11y 100 target · SEO 100 · best-practices clean; ≥95 perf gate is measured on Vercel production
 
 ### Phase 4 — i18n
 

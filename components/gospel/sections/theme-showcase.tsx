@@ -19,7 +19,7 @@ export function GospelThemeShowcase() {
     <Section className="py-16 sm:py-24">
       <Reveal>
         <div className="mx-auto max-w-xl text-center">
-          <p className="text-[13px] font-medium uppercase tracking-wide text-gold">
+          <p className="text-[13px] font-medium uppercase tracking-wide text-gold-text">
             Designed to disappear
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-fg sm:text-4xl">

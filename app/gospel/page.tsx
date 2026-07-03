@@ -23,6 +23,8 @@ import { GospelHowItWorks } from "@/components/gospel/sections/how-it-works";
 import { GospelBreakingHabits } from "@/components/gospel/sections/breaking-habits";
 import { GospelThemeShowcase } from "@/components/gospel/sections/theme-showcase";
 import { GospelTestimonial } from "@/components/gospel/sections/testimonial";
+import { GospelPricing } from "@/components/gospel/sections/pricing";
+import { GospelFaq } from "@/components/gospel/sections/faq";
 import { GospelFinalCta } from "@/components/gospel/sections/final-cta";
 import { gospelConfig } from "@/lib/gospel";
 
@@ -55,6 +57,8 @@ export default function GospelHome() {
         <GospelBreakingHabits />
         <GospelThemeShowcase />
         <GospelTestimonial />
+        <GospelPricing />
+        <GospelFaq />
         <GospelFinalCta />
       </main>
       <GospelSiteFooter />

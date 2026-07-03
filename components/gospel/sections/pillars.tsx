@@ -12,6 +12,7 @@
 
 import { Activity, BookOpen, Target, Users } from "lucide-react";
 import { Section } from "../../ui/section";
+import { Reveal } from "../../reveal";
 
 const PILLARS = [
   {
@@ -43,26 +44,29 @@ const PILLARS = [
 export function GospelPillars() {
   return (
     <Section id="pillars" className="py-16 sm:py-24">
-      <div className="max-w-xl">
-        <p className="text-[13px] font-medium uppercase tracking-wide text-accent">Four pillars</p>
-        <h2 className="mt-3 text-3xl font-bold tracking-tight text-fg sm:text-4xl">
-          One system for the whole of your formation.
-        </h2>
-      </div>
+      <Reveal>
+        <div className="max-w-xl">
+          <p className="text-[13px] font-medium uppercase tracking-wide text-accent-text">
+            Four pillars
+          </p>
+          <h2 className="mt-3 text-3xl font-bold tracking-tight text-fg sm:text-4xl">
+            One system for the whole of your formation.
+          </h2>
+        </div>
+      </Reveal>
 
       <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
-        {PILLARS.map((p) => (
-          <div
-            key={p.title}
-            className="rounded-2xl border border-divider bg-surface p-5 transition-colors hover:border-fg/20"
-          >
-            <p.icon
-              className={p.accent === "gold" ? "h-5 w-5 text-gold" : "h-5 w-5 text-accent"}
-              aria-hidden
-            />
-            <p className="mt-3 text-[15px] font-medium text-fg">{p.title}</p>
-            <p className="mt-1.5 text-[13px] leading-relaxed text-fg-secondary">{p.desc}</p>
-          </div>
+        {PILLARS.map((p, i) => (
+          <Reveal key={p.title} delay={i * 60} className="h-full">
+            <div className="h-full rounded-2xl border border-divider bg-surface p-5 transition-colors hover:border-fg/20">
+              <p.icon
+                className={p.accent === "gold" ? "h-5 w-5 text-gold" : "h-5 w-5 text-accent"}
+                aria-hidden
+              />
+              <p className="mt-3 text-[15px] font-medium text-fg">{p.title}</p>
+              <p className="mt-1.5 text-[13px] leading-relaxed text-fg-secondary">{p.desc}</p>
+            </div>
+          </Reveal>
         ))}
       </div>
     </Section>

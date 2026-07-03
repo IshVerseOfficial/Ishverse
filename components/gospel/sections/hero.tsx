@@ -27,7 +27,7 @@ export function GospelHero() {
       <NeuralField />
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-16 sm:px-8 sm:pb-28 sm:pt-24 lg:grid-cols-2">
         <div className="text-center lg:text-left">
-          <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3.5 py-1.5 text-[12px] font-medium text-accent-dark dark:text-accent">
+          <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-3.5 py-1.5 text-[12px] font-medium text-accent-text">
             <span className="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden />
             {gospelConfig.ecosystem}
           </span>
@@ -73,13 +73,13 @@ export function GospelHero() {
             <PhoneFrame
               src="/gospel/home-light.png"
               alt="The IshGospel home screen — verse of the day, formation score, and streak"
-              priority
+              eager
               className="relative dark:hidden"
             />
             <PhoneFrame
               src="/gospel/home-dark.png"
               alt="The IshGospel home screen — verse of the day, formation score, and streak"
-              priority
+              eager
               className="relative hidden dark:block"
             />
           </div>
