@@ -13,6 +13,7 @@
 
 import { Check, X } from "lucide-react";
 import { Section } from "../../ui/section";
+import { Reveal } from "../../reveal";
 
 const CONTRASTS = [
   { not: "A content feed to scroll", but: "A daily system to practice" },
@@ -24,8 +25,8 @@ export function GospelFormationEngine() {
   return (
     <Section className="py-16 sm:py-24">
       <div className="grid items-center gap-12 rounded-3xl border border-divider bg-surface p-8 sm:p-12 lg:grid-cols-2">
-        <div>
-          <p className="text-[13px] font-medium uppercase tracking-wide text-gold">
+        <Reveal>
+          <p className="text-[13px] font-medium uppercase tracking-wide text-gold-text">
             The difference
           </p>
           <h2 className="mt-3 text-3xl font-bold leading-tight tracking-tight text-fg sm:text-4xl">
@@ -36,22 +37,24 @@ export function GospelFormationEngine() {
             IshGospel gives you the structure that turns intention into formation. No noise. No
             gimmicks.
           </p>
-        </div>
+        </Reveal>
 
-        <ul className="space-y-3">
-          {CONTRASTS.map((c) => (
-            <li key={c.but} className="rounded-2xl border border-divider bg-bg p-4">
-              <p className="flex items-center gap-2 text-[13px] text-fg-secondary line-through decoration-fg-secondary/40">
-                <X className="h-4 w-4 shrink-0 text-error" aria-hidden />
-                {c.not}
-              </p>
-              <p className="mt-2 flex items-center gap-2 text-[14px] font-medium text-fg">
-                <Check className="h-4 w-4 shrink-0 text-success" aria-hidden />
-                {c.but}
-              </p>
-            </li>
-          ))}
-        </ul>
+        <Reveal delay={60}>
+          <ul className="space-y-3">
+            {CONTRASTS.map((c) => (
+              <li key={c.but} className="rounded-2xl border border-divider bg-bg p-4">
+                <p className="flex items-center gap-2 text-[13px] text-fg-secondary line-through decoration-fg-secondary/40">
+                  <X className="h-4 w-4 shrink-0 text-error" aria-hidden />
+                  {c.not}
+                </p>
+                <p className="mt-2 flex items-center gap-2 text-[14px] font-medium text-fg">
+                  <Check className="h-4 w-4 shrink-0 text-success" aria-hidden />
+                  {c.but}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </div>
     </Section>
   );

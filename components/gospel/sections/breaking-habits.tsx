@@ -39,7 +39,7 @@ export function GospelBreakingHabits() {
     <Section id="features" className="py-16 sm:py-24">
       <div className="grid items-center gap-12 rounded-3xl border border-accent/25 bg-accent/[0.06] p-8 sm:p-12 lg:grid-cols-2">
         <Reveal>
-          <span className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-3 py-1.5 text-[12px] font-medium text-accent-dark dark:text-accent">
+          <span className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-3 py-1.5 text-[12px] font-medium text-accent-text">
             <Shield className="h-3.5 w-3.5" aria-hidden />
             Breaking Habits
           </span>

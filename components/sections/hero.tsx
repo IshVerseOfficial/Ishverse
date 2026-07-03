@@ -46,7 +46,7 @@ export function Hero() {
                 href="#products"
                 className="inline-flex items-center gap-2 rounded-[10px] border border-divider bg-glass-bg px-5 py-3 text-[14px] text-fg-secondary transition-colors hover:text-fg"
               >
-                IshRize <span className="text-gold">· coming soon</span>
+                IshRize <span className="text-gold-text">· coming soon</span>
               </a>
             </div>
           </Reveal>

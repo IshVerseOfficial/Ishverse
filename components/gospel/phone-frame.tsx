@@ -13,12 +13,14 @@ import Image from "next/image";
 export function PhoneFrame({
   src,
   alt,
-  priority = false,
+  eager = false,
   className = "",
 }: {
   src: string;
   alt: string;
-  priority?: boolean;
+  /** Load eagerly without a preload hint — for above-the-fold frames where
+   *  two theme variants exist and preloading both would double the download. */
+  eager?: boolean;
   className?: string;
 }) {
   return (
@@ -30,7 +32,7 @@ export function PhoneFrame({
         alt={alt}
         width={1206}
         height={2622}
-        priority={priority}
+        loading={eager ? "eager" : "lazy"}
         sizes="(max-width: 640px) 240px, 280px"
         className="h-auto w-full rounded-[1.9rem]"
       />
