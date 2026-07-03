@@ -17,6 +17,7 @@ const GROUPS = [
     links: [
       { label: "Features", href: "#features" },
       { label: "Pillars", href: "#pillars" },
+      { label: "Pricing", href: "#pricing" },
       { label: "Download", href: "#waitlist" },
     ],
   },
