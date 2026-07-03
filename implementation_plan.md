@@ -99,9 +99,9 @@ One phase = one issue = one `feature/*` branch = one squash-merged PR (per CONTR
 - `phone-frame.tsx` + `sections/showcase.tsx` — "Inside the app" alternating rows (Bible · Prayer & Journal · Vision & Formation) with scroll reveals
 - Hero shows the real Home screen (theme-aware: light screenshot in light mode, dark in dark); Breaking Habits gets the real habit screenshot; theme showcase uses the real light/dark Home screens
 
-### Phase 7 — gospel pricing (next)
+### Phase 7 — gospel pricing ✅ (#8)
 
-- Pricing section with the app paywall tiers (Free · Personal $4.99 · Family $9.99 · Church Lite $49 · Church Pro $199 per month), recommended plan highlighted, nav/footer `#pricing` links
+- `sections/pricing.tsx` — mirrors the app paywall (SubscriptionPlansScreen): Free · Personal $4.99 (highlighted "Most popular") · Family $9.99, plus a churches band (Lite $49 · Pro $199 with contact CTA); nav/footer `#pricing` links. Keep in sync with the app paywall
 
 ### Phase 8 — gospel conversion polish (planned)
 

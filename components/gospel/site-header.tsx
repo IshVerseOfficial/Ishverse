@@ -19,6 +19,7 @@ import { gospelConfig } from "@/lib/gospel";
 const NAV_LINKS = [
   { href: "#features", label: "Features" },
   { href: "#pillars", label: "Pillars" },
+  { href: "#pricing", label: "Pricing" },
   { href: "#waitlist", label: "Download" },
 ] as const;
 
