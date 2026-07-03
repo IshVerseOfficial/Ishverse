@@ -63,6 +63,13 @@ Identical tokens to `ishgospel-web` — defined as CSS variables in `app/globals
 | `accent-dark` | `#0236A6` | Hover/pressed states                                        |
 | `gold`        | `#A68A4C` | Earned emphasis: the man, milestones, ~18% of network nodes |
 
+**Small text uses the readable variants.** Raw `accent` and `gold` fail WCAG 4.5:1 at label sizes on both pure white and pure black — for eyebrows, badges, and any text under ~18px use the theme-aware tokens instead:
+
+| Token         | Light     | Dark      | Use                              |
+| ------------- | --------- | --------- | -------------------------------- |
+| `accent-text` | `#0236A6` | `#78A5FF` | Small blue labels, eyebrows      |
+| `gold-text`   | `#7A6533` | `#C4A86A` | Small gold labels, status badges |
+
 ### Canvas / animation variables
 
 The animated layers read colors from CSS variables so they re-theme automatically (pattern proven in `NeuralField`):

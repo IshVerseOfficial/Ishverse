@@ -41,7 +41,7 @@ export function SiteFooter() {
                 </li>
               ) : (
                 <li key={p.name} className="text-[13px] text-fg-secondary">
-                  {p.name} <span className="text-gold">· soon</span>
+                  {p.name} <span className="text-gold-text">· soon</span>
                 </li>
               ),
             )}

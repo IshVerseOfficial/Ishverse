@@ -100,7 +100,9 @@ export function GospelPricing() {
     <Section id="pricing" className="py-16 sm:py-24">
       <Reveal>
         <div className="mx-auto max-w-xl text-center">
-          <p className="text-[13px] font-medium uppercase tracking-wide text-accent">Pricing</p>
+          <p className="text-[13px] font-medium uppercase tracking-wide text-accent-text">
+            Pricing
+          </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-fg sm:text-4xl">
             Start free. Grow when you&rsquo;re ready.
           </h2>
@@ -162,7 +164,7 @@ export function GospelPricing() {
       <Reveal delay={120}>
         <div className="mt-12 rounded-3xl border border-accent/25 bg-accent/[0.06] p-6 sm:p-10">
           <div className="mx-auto max-w-xl text-center">
-            <p className="text-[13px] font-medium uppercase tracking-wide text-gold">
+            <p className="text-[13px] font-medium uppercase tracking-wide text-gold-text">
               For churches
             </p>
             <h3 className="mt-3 text-2xl font-bold tracking-tight text-fg sm:text-3xl">
