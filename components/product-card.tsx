@@ -1,15 +1,25 @@
 /**
  * Module: ProductCard
  * Context: See DESIGN.md §8 — one product: name, domain, one-liner, status
- * badge, CTA link. Corner ornament is a static mini-constellation (§5 motif
- * reuse — same colors, no animation).
+ * badge, CTA link. Strings arrive pre-localized from the Ecosystem section
+ * (Phase 4). Corner ornament is a static mini-constellation (§5 motif reuse).
  *
  * Exports:
- *   ProductCard — server component for one ecosystem product
+ *   LocalizedProduct — the shape the card renders
+ *   ProductCard      — server component for one ecosystem product
  */
 
 import { ArrowUpRight } from "lucide-react";
-import type { Product } from "@/lib/site";
+
+export type LocalizedProduct = {
+  name: string;
+  wordmark: { strong: string; light: string };
+  domain: string;
+  oneLiner: string;
+  href: string;
+  status: "live" | "soon";
+  labels: { visit: string; live: string; soon: string };
+};
 
 function Constellation() {
   return (
@@ -34,7 +44,7 @@ function Constellation() {
   );
 }
 
-export function ProductCard({ product }: { product: Product }) {
+export function ProductCard({ product }: { product: LocalizedProduct }) {
   const live = product.status === "live";
 
   return (
@@ -55,16 +65,16 @@ export function ProductCard({ product }: { product: Product }) {
               href={product.href}
               className="inline-flex items-center gap-1.5 text-[14px] font-medium text-accent transition-colors hover:text-accent-dark"
             >
-              Visit {product.name}
+              {product.labels.visit}
               <ArrowUpRight className="h-4 w-4" aria-hidden />
             </a>
             <span className="rounded-full border border-divider px-3 py-1 text-[12px] text-fg-secondary">
-              Live
+              {product.labels.live}
             </span>
           </>
         ) : (
           <span className="rounded-full border border-divider px-3 py-1 text-[12px] text-gold-text">
-            Coming soon
+            {product.labels.soon}
           </span>
         )}
       </div>

@@ -39,7 +39,7 @@ The **company site** for IshVerse — the parent brand behind IshGospel and IshR
 - `next-themes` for system-auto + manual light/dark
 - `lucide-react` icons
 - **No animation libraries** — Canvas 2D + CSS only (DESIGN.md §11)
-- i18n deferred to Phase 4 (English-only until then)
+- i18n: `next-intl` — en/es/fr/pt, `as-needed` prefix (`/` = en, `/es`…), catalogs in `messages/`; routes live under `app/[locale]/`; legal pages stay English
 
 ## Hard rules
 

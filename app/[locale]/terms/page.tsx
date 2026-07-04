@@ -9,6 +9,7 @@
  */
 
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import { LegalPage, H2, P, UL } from "@/components/legal/prose";
 import { siteConfig } from "@/lib/site";
 
@@ -20,7 +21,9 @@ export const metadata: Metadata = {
 
 const UPDATED = "July 2, 2026";
 
-export default function TermsPage() {
+export default async function TermsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <LegalPage title="Terms of Service" updated={UPDATED}>
       <P>

@@ -1,0 +1,295 @@
+{
+  "gospel": {
+    "meta": {
+      "tagline": "A disciplina constrói profundidade.",
+      "description": "Um sistema estruturado de formação espiritual: Bíblia, oração, comunidade e visão. Não é um feed de conteúdo. Apareça. Reflita. Cresça."
+    },
+    "nav": {
+      "features": "Recursos",
+      "pillars": "Pilares",
+      "pricing": "Preços",
+      "getApp": "Obter o app",
+      "getAppShort": "App",
+      "toggleTheme": "Alternar entre tema claro e escuro"
+    },
+    "hero": {
+      "badge": "Parte do ecossistema Ish",
+      "title": "A disciplina constrói profundidade.",
+      "subtitle": "Um sistema estruturado de formação espiritual: Bíblia, oração, comunidade e visão. Não é um feed de conteúdo. Apareça. Reflita. Cresça.",
+      "download": "Baixar",
+      "waitlist": "Entrar na lista de espera",
+      "trustLanguages": "4 idiomas",
+      "trustOffline": "Funciona offline",
+      "trustNoGamification": "Sem gamificação",
+      "homeAlt": "A tela inicial do IshGospel — versículo do dia, pontuação de formação e sequência"
+    },
+    "pillars": {
+      "eyebrow": "Quatro pilares",
+      "heading": "Um único sistema para toda a sua formação.",
+      "bibleTitle": "Bíblia",
+      "bibleDesc": "Leia, destaque e siga planos — no seu idioma, com ou sem conexão.",
+      "communityTitle": "Comunidade",
+      "communityDesc": "Tarefas bíblicas e oração compartilhadas com quem você cresce.",
+      "formationTitle": "Formação",
+      "formationDesc": "Sequências, oração e reflexão: uma pontuação tranquila que mede profundidade, não pontos.",
+      "visionTitle": "Visão",
+      "visionDesc": "Defina metas espirituais e quebre os hábitos que te prendem."
+    },
+    "formationEngine": {
+      "eyebrow": "A diferença",
+      "title": "Isto não é um app de Bíblia. É um motor de formação.",
+      "body": "A fé não cresce por acaso — ela é formada, um dia disciplinado de cada vez. O IshGospel oferece a estrutura que transforma intenção em formação. Sem ruído. Sem truques.",
+      "not1": "Um feed de conteúdo para rolar",
+      "but1": "Um sistema diário para praticar",
+      "not2": "Pontos, distintivos, rankings",
+      "but2": "Uma pontuação reflexiva que mede profundidade",
+      "not3": "Motivação que se desvanece",
+      "but3": "Disciplina que se acumula"
+    },
+    "howItWorks": {
+      "eyebrow": "Como funciona",
+      "heading": "Apareça. Reflita. Cresça.",
+      "step1Title": "Apareça",
+      "step1Desc": "Abra o app para ler, orar ou meditar na Escritura. Um pequeno bloco diário repetível.",
+      "step2Title": "Reflita",
+      "step2Desc": "Anote o que percebeu. Marque o dia. Honestidade acima do desempenho, sempre.",
+      "step3Title": "Cresça",
+      "step3Desc": "A constância se acumula. Sua formação se aprofunda, sua sequência se mantém, sua comunidade vê."
+    },
+    "breakingHabits": {
+      "badge": "Quebrar hábitos",
+      "heading": "Intervenção ancorada na Escritura no seu momento mais difícil.",
+      "body": "Não é um contador de sequências. Um pacto diário — baseado no versículo que você escolher — que te encontra no momento da tentação, e uma comunidade que te ajuda a se levantar quando você cai.",
+      "p1Title": "Versículo âncora",
+      "p1Desc": "Escolha a Escritura à qual você retorna no momento da tentação.",
+      "p2Title": "Intervenção em tempo real",
+      "p2Desc": "Uma resposta «se-então» pré-combinada, no instante em que o impulso chega.",
+      "p3Title": "Parceiro de responsabilidade",
+      "p3Desc": "Um aliado opcional que vê sua sequência e seu versículo, nunca seus detalhes.",
+      "habitAlt": "A tela Quebrar hábitos do IshGospel com versículo âncora e sequência"
+    },
+    "themeShowcase": {
+      "eyebrow": "Projetado para desaparecer",
+      "heading": "Preto puro. Branco puro.",
+      "body": "Dois temas, sem distrações. Segue o seu sistema automaticamente, ou troque você mesmo quando quiser.",
+      "light": "Branco puro",
+      "dark": "Preto puro",
+      "streak": "Sequência de 14 dias",
+      "formation": "Formação",
+      "markComplete": "Marcar hoje como concluído",
+      "lightAlt": "IshGospel no tema branco puro",
+      "darkAlt": "IshGospel no tema preto puro"
+    },
+    "testimonial": {
+      "quote": "Já comecei uma dúzia de apps de Bíblia. Este é o primeiro que pareceu um sistema em vez de um feed. Aos noventa dias, a disciplina finalmente pegou.",
+      "name": "Daniel A.",
+      "role": "Líder de pequeno grupo"
+    },
+    "finalCta": {
+      "heading": "A fé não cresce por acaso.",
+      "body": "Comece a se formar, um dia disciplinado de cada vez. Baixe o app ou entre na lista de espera e avisaremos assim que estiver disponível na sua loja.",
+      "appStoreTop": "Baixar na",
+      "appStoreBottom": "App Store",
+      "playTop": "Disponível no",
+      "playBottom": "Google Play",
+      "waitlistPrompt": "Ainda não está pronto? Entre na lista de espera."
+    },
+    "waitlist": {
+      "emailLabel": "Endereço de e-mail",
+      "placeholder": "voce@exemplo.com",
+      "submit": "Avise-me",
+      "submitting": "Entrando…",
+      "success": "Você está na lista. Entraremos em contato.",
+      "invalid": "Insira um endereço de e-mail válido.",
+      "error": "Algo deu errado. Tente novamente."
+    },
+    "footer": {
+      "groupProduct": "Produto",
+      "groupCompany": "Empresa",
+      "groupLegal": "Jurídico",
+      "linkFeatures": "Recursos",
+      "linkPillars": "Pilares",
+      "linkPricing": "Preços",
+      "linkDownload": "Baixar",
+      "linkAbout": "Sobre",
+      "linkBrand": "Marca",
+      "linkContact": "Contato",
+      "linkPrivacy": "Privacidade",
+      "linkTerms": "Termos",
+      "rights": "Todos os direitos reservados.",
+      "linkSupport": "Suporte"
+    },
+    "showcase": {
+      "eyebrow": "Dentro do app",
+      "heading": "Feito para o trabalho diário.",
+      "bible": {
+        "eyebrow": "Bíblia",
+        "title": "A Escritura, lindamente legível.",
+        "body": "Um leitor que sai do caminho. Várias versões, áudio por capítulo, downloads offline — e versões em paralelo quando você quer ir mais fundo.",
+        "p1": "Ouça com áudio por capítulo",
+        "p2": "Leia offline, em qualquer lugar",
+        "p3": "Destaques, notas e planos",
+        "alt": "O leitor bíblico do IshGospel mostrando Salmos 119"
+      },
+      "journal": {
+        "eyebrow": "Oração e diário",
+        "title": "Reflexão que permanece.",
+        "body": "Registre orações, anote o que você percebeu e deixe a honestidade se transformar em profundidade. Seus diários e orações são privados da sua conta — sempre.",
+        "p1": "Reflexão diária guiada",
+        "p2": "Registro de oração com respostas",
+        "p3": "Privado por padrão",
+        "alt": "A tela de diário do IshGospel"
+      },
+      "vision": {
+        "eyebrow": "Visão e formação",
+        "title": "Metas com espinha dorsal.",
+        "body": "Defina metas espirituais, acompanhe sua pontuação de formação e deixe os números serenos dizerem a verdade sobre a sua caminhada. Sem insígnias. Sem ruído.",
+        "p1": "Pontuação de formação de 0 a 100",
+        "p2": "Sequências que medem a presença",
+        "p3": "Metas espirituais, acompanhadas",
+        "alt": "A tela de visão e metas do IshGospel"
+      }
+    },
+    "pricing": {
+      "eyebrow": "Preços",
+      "heading": "Comece grátis. Cresça quando estiver pronto.",
+      "sub": "O trabalho diário — Bíblia, diário, oração, formação — é grátis. O Premium desbloqueia mais comunidades e ferramentas para famílias e igrejas. As assinaturas são gerenciadas no app.",
+      "mostPopular": "Mais popular",
+      "getApp": "Baixar o app",
+      "talkToUs": "Fale conosco",
+      "perMonth": "por mês",
+      "forever": "para sempre",
+      "churchesEyebrow": "Para igrejas",
+      "churchesHeading": "Conduza toda uma comunidade na formação.",
+      "free": {
+        "name": "Grátis",
+        "desc": "O trabalho diário, grátis para todos",
+        "f1": "Leitura bíblica, destaques e planos",
+        "f2": "Diário e registro de oração",
+        "f3": "Pontuação de formação e sequências",
+        "f4": "Participe de uma comunidade"
+      },
+      "personal": {
+        "name": "Personal Premium",
+        "desc": "Perfeito para indivíduos",
+        "f1": "Comunidades ilimitadas",
+        "f2": "Acompanhamento de formação",
+        "f3": "Planos de leitura compartilhados",
+        "f4": "Experiência sem anúncios"
+      },
+      "family": {
+        "name": "Plano Família",
+        "desc": "Para famílias (5–10 pessoas)",
+        "f1": "Tudo do Personal",
+        "f2": "Até 10 membros da família",
+        "f3": "Painel da família",
+        "f4": "Planos de leitura compartilhados"
+      },
+      "lite": {
+        "name": "Church Lite",
+        "desc": "Grupos pequenos (15–50 membros)",
+        "f1": "Painel administrativo",
+        "f2": "Ferramentas para líderes",
+        "f3": "Acompanhe o progresso dos membros",
+        "f4": "Exportar relatórios",
+        "f5": "Suporte por e-mail"
+      },
+      "pro": {
+        "name": "Church Pro",
+        "desc": "Igrejas maiores (100+)",
+        "f1": "Tudo do Lite",
+        "f2": "Opção white-label",
+        "f3": "Acesso à API",
+        "f4": "Suporte por telefone",
+        "f5": "Integrações personalizadas"
+      }
+    },
+    "faq": {
+      "eyebrow": "Perguntas frequentes",
+      "heading": "Perguntas, respondidas.",
+      "more": "Algo mais?",
+      "q1": "O IshGospel é grátis?",
+      "a1": "Sim. O trabalho diário — leitura bíblica, destaques e planos, diário, oração e acompanhamento de formação — é grátis. Os planos premium adicionam comunidades ilimitadas e ferramentas para famílias e igrejas.",
+      "q2": "Em quais plataformas está?",
+      "a2": "Primeiro no Android; o iOS vem em seguida. Entre na lista de espera e avisaremos assim que estiver na sua loja.",
+      "q3": "Meus diários e orações são privados?",
+      "a3": "Sim. Diários e registros de oração são visíveis apenas para a sua conta. Seu conteúdo nunca é usado para publicidade nem vendido — veja nossa política de privacidade.",
+      "q4": "O que é a pontuação de formação?",
+      "a4": "Um reflexo sereno, de 0 a 100, da sua constância entre Bíblia, diário e oração. Mede profundidade, não pontos — sem insígnias nem rankings.",
+      "q5": "Como funcionam as assinaturas?",
+      "a5": "O Premium é comprado dentro do app pela cobrança da sua loja (Google Play ou App Store) e pode ser cancelado lá a qualquer momento.",
+      "q6": "Minha igreja ou grupo pode usar?",
+      "a6": "Sim. O Church Lite e o Church Pro adicionam painel administrativo, ferramentas para líderes e acompanhamento do progresso. Escreva para contact@ishverse.com e nós configuramos."
+    }
+  },
+  "company": {
+    "meta": {
+      "title": "Sistemas para o crescimento intencional.",
+      "description": "A IshVerse constrói sistemas de disciplina — um para cada domínio da vida. Um homem no comando do seu mundo."
+    },
+    "nav": {
+      "products": "Produtos",
+      "story": "História",
+      "contact": "Contato",
+      "explore": "Explorar IshGospel"
+    },
+    "hero": {
+      "rize": "IshRize",
+      "comingSoon": "em breve"
+    },
+    "products": {
+      "eyebrow": "Produtos",
+      "heading": "Um sistema para cada domínio da vida.",
+      "sub": "A mesma filosofia. O mesmo rigor de design. Domínios diferentes.",
+      "visit": "Visitar {name}",
+      "live": "Disponível",
+      "soon": "Em breve",
+      "gospelDomain": "Disciplina espiritual",
+      "gospelLine": "Um sistema estruturado de formação espiritual.",
+      "rizeDomain": "Disciplina acadêmica",
+      "rizeLine": "Um sistema estruturado de disciplina acadêmica."
+    },
+    "philosophy": {
+      "eyebrow": "O nome",
+      "heading": "Ish é o homem. Verse é o seu mundo.",
+      "p1": "<b>Ish</b> — a palavra hebraica para homem. Espírito, vontade, a capacidade de agir.",
+      "p2": "<b>Verse</b> — o mundo que lhe foi dado: fé, estudo, trabalho, hábito.",
+      "p3": "Cada produto Ish toma um domínio desse mundo e lhe dá estrutura. Não motivação — sistemas. O mundo gira; o homem disciplinado permanece firme, no comando.",
+      "p4": "O sistema é <blue>azul</blue>. O homem é <gold>dourado</gold>."
+    },
+    "principles": {
+      "eyebrow": "Princípios",
+      "heading": "No que todo sistema Ish acredita.",
+      "p1t": "Disciplina acima da emoção",
+      "p1b": "As emoções seguem a ação. Os sistemas tornam a ação repetível.",
+      "p2t": "A estrutura sustenta o crescimento",
+      "p2b": "O crescimento duradouro tem andaime, não é espontâneo.",
+      "p3t": "A constância constrói profundidade",
+      "p3b": "Apareça. Reflita. Cresça. E repita amanhã."
+    },
+    "contact": {
+      "eyebrow": "Contato",
+      "heading": "Fale conosco.",
+      "body": "Parcerias, imprensa ou dúvidas — um único endereço."
+    },
+    "footer": {
+      "products": "Produtos",
+      "company": "Empresa",
+      "legal": "Legal",
+      "contact": "Contato",
+      "support": "Suporte",
+      "privacy": "Política de privacidade",
+      "terms": "Termos de serviço",
+      "soon": "em breve",
+      "rights": "Todos os direitos reservados."
+    }
+  },
+  "rize": {
+    "soon": "Em breve",
+    "body": "Um sistema estruturado de disciplina acadêmica. A mesma filosofia do IshGospel. O mesmo rigor de design. Um domínio diferente.",
+    "notify": "Avise-me",
+    "meet": "Conheça a IshVerse",
+    "metaTitle": "IshRize — Em breve",
+    "metaDescription": "Um sistema estruturado de disciplina acadêmica. Parte do ecossistema Ish."
+  }
+}
