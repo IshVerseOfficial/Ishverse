@@ -119,11 +119,12 @@ One phase = one issue = one `feature/*` branch = one squash-merged PR (per CONTR
 - All company + gospel + rize copy localized; gospel translations reuse the ishgospel-web catalogs; legal pages remain English
 - Subdomain-aware `LanguageSwitcher` in both headers; hreflang alternates + localized metadata per page
 
-### Phase 5 — Deploy + DNS
+### Phase 5 — Deploy + DNS ✅ (live, one item outstanding)
 
-- Vercel project; domains `ishverse.com`, `www.ishverse.com` (redirect → apex), `rize.ishverse.com`
-- DNS records at registrar; verify `mail.ishverse.com` Resend records untouched
-- Lighthouse pass ≥ 95 on production; update INFRASTRUCTURE.md subdomain table
+- Vercel project live at `ishverse.com`, `gospel.ishverse.com`, `rize.ishverse.com` (Namecheap DNS: A/CNAME records; `mail.ishverse.com` Resend records untouched)
+- Production Lighthouse (2026-07-04): gospel 98/100/100/100 · rize 99/100/100/63 (63 intentional — `noindex` placeholder) · ishverse.com 92/100/100/91
+- ⚠️ **`www.ishverse.com` redirect is backwards** — currently `ishverse.com` 308s to `www`, when the code (canonical URLs, hreflang, `siteConfig.url`) assumes the apex is canonical. Fix in Vercel → Settings → Domains: set `ishverse.com` to **Production**, `www.ishverse.com` to **Redirect → ishverse.com**. This alone should close most of the gap on the ishverse.com perf/SEO scores above
+- `ishgospel-docs/INFRASTRUCTURE.md` updated with the live domain table and these scores
 
 ---
 
