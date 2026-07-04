@@ -1,0 +1,295 @@
+{
+  "gospel": {
+    "meta": {
+      "tagline": "Discipline builds depth.",
+      "description": "A structured spiritual formation system — Bible, prayer, community, and vision. Not a content feed. Show up. Reflect. Grow."
+    },
+    "nav": {
+      "features": "Features",
+      "pillars": "Pillars",
+      "pricing": "Pricing",
+      "getApp": "Get the app",
+      "getAppShort": "App",
+      "toggleTheme": "Toggle light and dark theme"
+    },
+    "hero": {
+      "badge": "Part of the Ish ecosystem",
+      "title": "Discipline builds depth.",
+      "subtitle": "A structured spiritual formation system — Bible, prayer, community, and vision. Not a content feed. Show up. Reflect. Grow.",
+      "download": "Download",
+      "waitlist": "Join the waitlist",
+      "trustLanguages": "4 languages",
+      "trustOffline": "Works offline",
+      "trustNoGamification": "No gamification",
+      "homeAlt": "The IshGospel home screen — verse of the day, formation score, and streak"
+    },
+    "pillars": {
+      "eyebrow": "Four pillars",
+      "heading": "One system for the whole of your formation.",
+      "bibleTitle": "Bible",
+      "bibleDesc": "Read, highlight, and follow plans — in your language, online or off.",
+      "communityTitle": "Community",
+      "communityDesc": "Shared scripture assignments and prayer with the people you grow with.",
+      "formationTitle": "Formation",
+      "formationDesc": "Streaks, prayer, and reflection — a quiet score that measures depth, not points.",
+      "visionTitle": "Vision",
+      "visionDesc": "Set spiritual goals and break the habits that hold you back."
+    },
+    "formationEngine": {
+      "eyebrow": "The difference",
+      "title": "This isn't a Bible app. It's a formation engine.",
+      "body": "Faith doesn't grow by accident — it's formed, one disciplined day at a time. IshGospel gives you the structure that turns intention into formation. No noise. No gimmicks.",
+      "not1": "A content feed to scroll",
+      "but1": "A daily system to practice",
+      "not2": "Points, badges, leaderboards",
+      "but2": "A reflective score that measures depth",
+      "not3": "Motivation that fades",
+      "but3": "Discipline that compounds"
+    },
+    "howItWorks": {
+      "eyebrow": "How it works",
+      "heading": "Show up. Reflect. Grow.",
+      "step1Title": "Show up",
+      "step1Desc": "Open the app to read, pray, or sit with scripture. A small, repeatable daily block.",
+      "step2Title": "Reflect",
+      "step2Desc": "Journal what you noticed. Mark the day. Honesty over performance — every time.",
+      "step3Title": "Grow",
+      "step3Desc": "Consistency compounds. Your formation deepens, your streak holds, your community sees it."
+    },
+    "breakingHabits": {
+      "badge": "Breaking Habits",
+      "heading": "Scripture-anchored intervention at your hardest moment.",
+      "body": "Not a streak counter. A daily covenant — built on the verse you choose — that meets you the moment temptation hits, and a community that helps you rise again when you fall.",
+      "p1Title": "Anchor verse",
+      "p1Desc": "Choose the scripture you return to in the moment of temptation.",
+      "p2Title": "Real-time intervention",
+      "p2Desc": "A pre-committed if-then replacement, the instant the urge hits.",
+      "p3Title": "Accountability partner",
+      "p3Desc": "An optional ally who sees your streak and verse — never your details.",
+      "habitAlt": "The IshGospel Breaking Habits screen with anchor verse and streak"
+    },
+    "themeShowcase": {
+      "eyebrow": "Designed to disappear",
+      "heading": "Pure black. Pure white.",
+      "body": "Two themes, no distractions. It follows your system automatically — or switch it yourself, any time.",
+      "light": "Pure white",
+      "dark": "Pure black",
+      "streak": "14-day streak",
+      "formation": "Formation",
+      "markComplete": "Mark today complete",
+      "lightAlt": "IshGospel in the pure white theme",
+      "darkAlt": "IshGospel in the pure black theme"
+    },
+    "testimonial": {
+      "quote": "I've started a dozen Bible apps. This is the first one that felt like a system instead of a feed. Ninety days in, the discipline finally stuck.",
+      "name": "Daniel A.",
+      "role": "Small group leader"
+    },
+    "finalCta": {
+      "heading": "Faith doesn't grow by accident.",
+      "body": "Start forming — one disciplined day at a time. Get the app, or join the waitlist and we'll tell you the moment it's live in your store.",
+      "appStoreTop": "Download on the",
+      "appStoreBottom": "App Store",
+      "playTop": "Get it on",
+      "playBottom": "Google Play",
+      "waitlistPrompt": "Not ready? Join the waitlist."
+    },
+    "waitlist": {
+      "emailLabel": "Email address",
+      "placeholder": "you@example.com",
+      "submit": "Notify me",
+      "submitting": "Joining…",
+      "success": "You're on the list. We'll be in touch.",
+      "invalid": "Please enter a valid email address.",
+      "error": "Something went wrong. Please try again."
+    },
+    "footer": {
+      "groupProduct": "Product",
+      "groupCompany": "Company",
+      "groupLegal": "Legal",
+      "linkFeatures": "Features",
+      "linkPillars": "Pillars",
+      "linkPricing": "Pricing",
+      "linkDownload": "Download",
+      "linkAbout": "About",
+      "linkBrand": "Brand",
+      "linkContact": "Contact",
+      "linkPrivacy": "Privacy",
+      "linkTerms": "Terms",
+      "rights": "All rights reserved.",
+      "linkSupport": "Support"
+    },
+    "showcase": {
+      "eyebrow": "Inside the app",
+      "heading": "Built for the daily work.",
+      "bible": {
+        "eyebrow": "Bible",
+        "title": "Scripture, beautifully readable.",
+        "body": "A reader that gets out of the way. Multiple versions, chapter audio, offline downloads — and parallel versions side by side when you want to go deeper.",
+        "p1": "Listen with chapter audio",
+        "p2": "Read offline, anywhere",
+        "p3": "Highlights, notes, and plans",
+        "alt": "The IshGospel Bible reader showing Psalms 119"
+      },
+      "journal": {
+        "eyebrow": "Prayer & Journal",
+        "title": "Reflection that sticks.",
+        "body": "Log prayers, journal what you noticed, and let honesty compound into depth. Your journals and prayers stay private to your account — always.",
+        "p1": "Guided daily reflection",
+        "p2": "Prayer log with answers",
+        "p3": "Private by default",
+        "alt": "The IshGospel journaling screen"
+      },
+      "vision": {
+        "eyebrow": "Vision & Formation",
+        "title": "Goals with a spine.",
+        "body": "Set spiritual goals, watch your formation score, and let the quiet numbers tell you the truth about your walk. No badges. No noise.",
+        "p1": "Formation score out of 100",
+        "p2": "Streaks that measure showing up",
+        "p3": "Spiritual goals, tracked",
+        "alt": "The IshGospel vision and goals screen"
+      }
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "heading": "Start free. Grow when you're ready.",
+      "sub": "The daily work — Bible, journal, prayer, formation — is free. Premium unlocks more communities and tools for families and churches. Subscriptions are managed in the app.",
+      "mostPopular": "Most popular",
+      "getApp": "Get the app",
+      "talkToUs": "Talk to us",
+      "perMonth": "per month",
+      "forever": "forever",
+      "churchesEyebrow": "For churches",
+      "churchesHeading": "Lead a whole community through formation.",
+      "free": {
+        "name": "Free",
+        "desc": "The daily work, free for everyone",
+        "f1": "Bible reading, highlights & plans",
+        "f2": "Journaling & prayer log",
+        "f3": "Formation score & streaks",
+        "f4": "Join a community"
+      },
+      "personal": {
+        "name": "Personal Premium",
+        "desc": "Perfect for individuals",
+        "f1": "Unlimited communities",
+        "f2": "Formation tracking",
+        "f3": "Shared reading plans",
+        "f4": "Ad-free experience"
+      },
+      "family": {
+        "name": "Family Plan",
+        "desc": "For families (5–10 people)",
+        "f1": "Everything in Personal",
+        "f2": "Up to 10 family members",
+        "f3": "Family dashboard",
+        "f4": "Shared reading plans"
+      },
+      "lite": {
+        "name": "Church Lite",
+        "desc": "Small groups (15–50 members)",
+        "f1": "Admin dashboard",
+        "f2": "Group leader tools",
+        "f3": "Track member progress",
+        "f4": "Export reports",
+        "f5": "Email support"
+      },
+      "pro": {
+        "name": "Church Pro",
+        "desc": "Larger churches (100+ members)",
+        "f1": "Everything in Lite",
+        "f2": "White-label option",
+        "f3": "API access",
+        "f4": "Phone support",
+        "f5": "Custom integrations"
+      }
+    },
+    "faq": {
+      "eyebrow": "FAQ",
+      "heading": "Questions, answered.",
+      "more": "Something else?",
+      "q1": "Is IshGospel free?",
+      "a1": "Yes. The daily work — Bible reading, highlights and plans, journaling, prayer, and formation tracking — is free. Premium plans add unlimited communities and tools for families and churches.",
+      "q2": "What platforms is it on?",
+      "a2": "Android first, with iOS to follow. Join the waitlist and we'll tell you the moment it's live in your store.",
+      "q3": "Are my journals and prayers private?",
+      "a3": "Yes. Journals and prayer logs are visible only to your account. Your content is never used for advertising and never sold — see our privacy policy.",
+      "q4": "What is the formation score?",
+      "a4": "A quiet 0–100 reflection of your consistency across Bible, journal, and prayer. It measures depth, not points — there are no badges or leaderboards.",
+      "q5": "How do subscriptions work?",
+      "a5": "Premium is purchased inside the app through your store's billing (Google Play or the App Store) and can be cancelled there any time.",
+      "q6": "Can my church or small group use it?",
+      "a6": "Yes. Church Lite and Church Pro add an admin dashboard, leader tools, and member progress tracking. Write to contact@ishverse.com and we'll set you up."
+    }
+  },
+  "company": {
+    "meta": {
+      "title": "Systems for Intentional Growth.",
+      "description": "IshVerse builds discipline systems — one for each domain of life. A man, in command of his world."
+    },
+    "nav": {
+      "products": "Products",
+      "story": "Story",
+      "contact": "Contact",
+      "explore": "Explore IshGospel"
+    },
+    "hero": {
+      "rize": "IshRize",
+      "comingSoon": "coming soon"
+    },
+    "products": {
+      "eyebrow": "Products",
+      "heading": "One system per domain of life.",
+      "sub": "Same philosophy. Same design rigor. Different domains.",
+      "visit": "Visit {name}",
+      "live": "Live",
+      "soon": "Coming soon",
+      "gospelDomain": "Spiritual discipline",
+      "gospelLine": "A structured system for spiritual formation.",
+      "rizeDomain": "Academic discipline",
+      "rizeLine": "A structured system for academic discipline."
+    },
+    "philosophy": {
+      "eyebrow": "The name",
+      "heading": "Ish is man. Verse is his world.",
+      "p1": "<b>Ish</b> — the Hebrew word for man. Spirit, will, the capacity to act.",
+      "p2": "<b>Verse</b> — the world he is given: faith, learning, work, habit.",
+      "p3": "Every Ish product takes one domain of that world and gives it structure. Not motivation — systems. The world turns; the disciplined man is still, and in command of it.",
+      "p4": "The system is <blue>blue</blue>. The man is <gold>gold</gold>."
+    },
+    "principles": {
+      "eyebrow": "Principles",
+      "heading": "What every Ish system believes.",
+      "p1t": "Discipline over feeling",
+      "p1b": "Feelings follow action. Systems make action repeatable.",
+      "p2t": "Structure supports growth",
+      "p2b": "Growth that lasts is scaffolded, not spontaneous.",
+      "p3t": "Consistency builds depth",
+      "p3b": "Show up. Reflect. Grow. Then do it again tomorrow."
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "heading": "Talk to us.",
+      "body": "Partnerships, press, or questions — one address."
+    },
+    "footer": {
+      "products": "Products",
+      "company": "Company",
+      "legal": "Legal",
+      "contact": "Contact",
+      "support": "Support",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "soon": "soon",
+      "rights": "All rights reserved."
+    }
+  },
+  "rize": {
+    "soon": "Coming soon",
+    "body": "A structured system for academic discipline. Same philosophy as IshGospel. Same design rigor. A different domain.",
+    "notify": "Notify me",
+    "meet": "Meet IshVerse",
+    "metaTitle": "IshRize — Coming soon",
+    "metaDescription": "A structured system for academic discipline. Part of the Ish ecosystem."
+  }
+}

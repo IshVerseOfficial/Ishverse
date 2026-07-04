@@ -1,12 +1,13 @@
 /**
  * Module: Hero
  * Context: See DESIGN.md §10 — hero blueprint: copy beside the VerseGlobe;
- * on mobile the globe sits below the copy at full legibility priority.
+ * on mobile the globe sits below the copy. Localized (Phase 4).
  *
  * Exports:
  *   Hero — server component (VerseGlobe is a client canvas island)
  */
 
+import { useTranslations } from "next-intl";
 import { ArrowUpRight } from "lucide-react";
 import { Section } from "../ui/section";
 import { VerseGlobe } from "../verse-globe";
@@ -14,6 +15,8 @@ import { Reveal } from "../reveal";
 import { siteConfig } from "@/lib/site";
 
 export function Hero() {
+  const t = useTranslations("company");
+
   return (
     <div className="relative overflow-hidden">
       <Section className="grid min-h-[88svh] items-center gap-10 py-20 md:grid-cols-2 md:gap-6">
@@ -25,12 +28,12 @@ export function Hero() {
           </Reveal>
           <Reveal delay={60}>
             <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-7xl">
-              Systems for Intentional Growth.
+              {t("meta.title")}
             </h1>
           </Reveal>
           <Reveal delay={120}>
             <p className="mt-6 max-w-prose text-base leading-relaxed text-fg-secondary md:text-lg">
-              {siteConfig.description}
+              {t("meta.description")}
             </p>
           </Reveal>
           <Reveal delay={180}>
@@ -39,14 +42,14 @@ export function Hero() {
                 href={siteConfig.products[0].href}
                 className="inline-flex items-center gap-2 rounded-[10px] bg-accent px-5 py-3 text-[14px] font-medium text-accent-on transition-colors hover:bg-accent-dark"
               >
-                Explore IshGospel
+                {t("nav.explore")}
                 <ArrowUpRight className="h-4 w-4" aria-hidden />
               </a>
               <a
                 href="#products"
                 className="inline-flex items-center gap-2 rounded-[10px] border border-divider bg-glass-bg px-5 py-3 text-[14px] text-fg-secondary transition-colors hover:text-fg"
               >
-                IshRize <span className="text-gold-text">· coming soon</span>
+                {t("hero.rize")} <span className="text-gold-text">· {t("hero.comingSoon")}</span>
               </a>
             </div>
           </Reveal>

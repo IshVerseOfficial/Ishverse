@@ -112,9 +112,12 @@ One phase = one issue = one `feature/*` branch = one squash-merged PR (per CONTR
 - A11y: new `accent-text` / `gold-text` tokens (DESIGN.md §3) — raw accent/gold failed 4.5:1 at label sizes; hero stops preloading both theme screenshots
 - Lighthouse (local prod build): a11y 100 target · SEO 100 · best-practices clean; ≥95 perf gate is measured on Vercel production
 
-### Phase 4 — i18n
+### Phase 4 — i18n ✅ (#11)
 
-- `next-intl` wired like ishgospel-web; en/es/fr/pt messages
+- `next-intl` (localePrefix `as-needed`, no auto-detect redirects): `/` = English, `/es` `/fr` `/pt` prefixed — works on the apex and on product subdomains (`gospel.ishverse.com/es`)
+- `middleware.ts` composes subdomain rewrites with locale resolution; tolerates locale-switch paths that already carry the product segment
+- All company + gospel + rize copy localized; gospel translations reuse the ishgospel-web catalogs; legal pages remain English
+- Subdomain-aware `LanguageSwitcher` in both headers; hreflang alternates + localized metadata per page
 
 ### Phase 5 — Deploy + DNS
 
