@@ -1,15 +1,13 @@
 /**
  * Module: GospelFinalCta
  * Context: Ported from ishgospel-web — primary goal is mobile installs;
- * waitlist captures the not-ready.
- *
- * Closing conversion block: download buttons (primary path) + the waitlist form
- * (secondary). The #waitlist id is the hero's secondary-CTA anchor target.
+ * waitlist captures the not-ready. Localized (Phase 4).
  *
  * Exports:
  *   GospelFinalCta — server component
  */
 
+import { useTranslations } from "next-intl";
 import { Apple, Play } from "lucide-react";
 import { Section } from "../../ui/section";
 import { Reveal } from "../../reveal";
@@ -17,14 +15,16 @@ import { WaitlistForm } from "../waitlist-form";
 import { gospelConfig } from "@/lib/gospel";
 
 export function GospelFinalCta() {
+  const t = useTranslations("gospel.finalCta");
+
   const stores = [
     {
       href: gospelConfig.store.appStore,
       icon: Apple,
-      top: "Download on the",
-      bottom: "App Store",
+      top: t("appStoreTop"),
+      bottom: t("appStoreBottom"),
     },
-    { href: gospelConfig.store.playStore, icon: Play, top: "Get it on", bottom: "Google Play" },
+    { href: gospelConfig.store.playStore, icon: Play, top: t("playTop"), bottom: t("playBottom") },
   ];
 
   return (
@@ -32,11 +32,10 @@ export function GospelFinalCta() {
       <Reveal>
         <div className="relative overflow-hidden rounded-3xl border border-divider bg-surface px-6 py-14 text-center sm:px-12">
           <h2 className="mx-auto max-w-xl text-3xl font-bold tracking-tight text-fg sm:text-4xl">
-            Faith doesn&rsquo;t grow by accident.
+            {t("heading")}
           </h2>
           <p className="mx-auto mt-4 max-w-md text-[15px] leading-relaxed text-fg-secondary">
-            Start forming — one disciplined day at a time. Get the app, or join the waitlist and
-            we&rsquo;ll tell you the moment it&rsquo;s live in your store.
+            {t("body")}
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -58,7 +57,7 @@ export function GospelFinalCta() {
           </div>
 
           <div className="mx-auto mt-10 max-w-md border-t border-divider pt-8">
-            <p className="mb-4 text-[13px] text-fg-secondary">Not ready? Join the waitlist.</p>
+            <p className="mb-4 text-[13px] text-fg-secondary">{t("waitlistPrompt")}</p>
             <WaitlistForm />
           </div>
         </div>

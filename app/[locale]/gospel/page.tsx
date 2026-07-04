@@ -1,18 +1,15 @@
 /**
  * Module: IshGospel Landing Page
  * Context: See middleware.ts — served at gospel.ishverse.com via subdomain
- * rewrite. Ported from the retired ishgospel-web repo (its Phase 1 landing).
- *
- * The conversion-focused product page, composed from gospel section components.
- * Server-rendered; client islands are the theme toggle, NeuralField, and
- * waitlist form.
+ * rewrite. Localized (Phase 4).
  *
  * Exports:
- *   metadata — page SEO metadata (canonical on the gospel subdomain)
- *   default  — GospelHome
+ *   generateMetadata — localized SEO metadata (canonical on the gospel subdomain)
+ *   default          — GospelHome
  */
 
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { GospelSiteHeader } from "@/components/gospel/site-header";
 import { GospelSiteFooter } from "@/components/gospel/site-footer";
 import { GospelHero } from "@/components/gospel/sections/hero";
@@ -28,31 +25,50 @@ import { GospelFaq } from "@/components/gospel/sections/faq";
 import { GospelFinalCta } from "@/components/gospel/sections/final-cta";
 import { gospelConfig } from "@/lib/gospel";
 
-const title = `${gospelConfig.name} — ${gospelConfig.tagline}`;
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "gospel.meta" });
+  const title = `${gospelConfig.name} — ${t("tagline")}`;
 
-export const metadata: Metadata = {
-  title,
-  description: gospelConfig.description,
-  alternates: { canonical: gospelConfig.url },
-  openGraph: {
-    type: "website",
+  return {
     title,
-    description: gospelConfig.description,
-    url: gospelConfig.url,
-    siteName: gospelConfig.name,
-  },
-  twitter: { card: "summary_large_image", title, description: gospelConfig.description },
-};
+    description: t("description"),
+    alternates: { canonical: gospelConfig.url },
+    icons: { icon: "/ishgospel-logo.png" },
+    openGraph: {
+      type: "website",
+      title,
+      description: t("description"),
+      url: gospelConfig.url,
+      siteName: gospelConfig.name,
+      locale,
+      images: [{ url: "/api/og/gospel", width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: t("description"),
+      images: ["/api/og/gospel"],
+    },
+  };
+}
 
-export default function GospelHome() {
+export default async function GospelHome({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <GospelSiteHeader />
       <main>
         <GospelHero />
         <GospelPillars />
-        <GospelFormationEngine />
         <GospelShowcase />
+        <GospelFormationEngine />
         <GospelHowItWorks />
         <GospelBreakingHabits />
         <GospelThemeShowcase />

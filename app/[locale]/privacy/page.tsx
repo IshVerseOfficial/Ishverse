@@ -14,6 +14,7 @@
  */
 
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import { LegalPage, H2, P, UL } from "@/components/legal/prose";
 import { siteConfig } from "@/lib/site";
 
@@ -25,7 +26,9 @@ export const metadata: Metadata = {
 
 const UPDATED = "July 2, 2026";
 
-export default function PrivacyPage() {
+export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
   return (
     <LegalPage title="Privacy Policy" updated={UPDATED}>
       <P>

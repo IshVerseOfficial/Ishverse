@@ -1,21 +1,25 @@
 /**
  * Module: Gospel OG Image
  * Context: See implementation_plan.md Phase 8 — social-share card for
- * gospel.ishverse.com, generated at build time with next/og. Brand rules:
+ * gospel.ishverse.com, generated at request time with next/og. Brand rules:
  * pure black stage, blue system, gold accent (DESIGN.md §3).
  *
+ * Lives under /api/ (not the opengraph-image.tsx metadata-file convention)
+ * because the file convention can't be colocated with app/[locale]/gospel/
+ * without an ambiguous build output — see Phase 4 fix notes. Referenced
+ * explicitly from the gospel page's openGraph.images metadata instead.
+ * /api/* is excluded from middleware.ts's matcher, so this route is never
+ * touched by subdomain rewriting or locale resolution.
+ *
  * Exports:
- *   default — ImageResponse (1200×630)
- *   size, contentType, alt — OG metadata
+ *   GET — returns the 1200×630 PNG via ImageResponse
  */
 
 import { ImageResponse } from "next/og";
 
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
-export const alt = "IshGospel — Discipline builds depth.";
+const SIZE = { width: 1200, height: 630 };
 
-export default function OgImage() {
+export async function GET() {
   return new ImageResponse(
     <div
       style={{
@@ -68,6 +72,6 @@ export default function OgImage() {
         </div>
       </div>
     </div>,
-    size,
+    SIZE,
   );
 }

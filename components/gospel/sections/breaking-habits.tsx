@@ -1,57 +1,43 @@
 /**
  * Module: GospelBreakingHabits
- * Context: Ported from ishgospel-web — Breaking Habits feature
- * (ishgospel-docs/RETENTION_FEATURES.md).
- *
- * Spotlight for the addiction-breaking feature: a daily covenant anchored in
- * scripture, with real-time intervention and optional accountability. Split
- * layout — narrative left, feature points right; stacks on mobile.
+ * Context: Ported from ishgospel-web — Breaking Habits feature spotlight with
+ * the real habit screenshot. Localized (Phase 4).
  *
  * Exports:
  *   GospelBreakingHabits — server component
  */
 
+import { useTranslations } from "next-intl";
 import { BookMarked, HeartHandshake, Shield, ShieldBan } from "lucide-react";
 import { Section } from "../../ui/section";
 import { Reveal } from "../../reveal";
 import { PhoneFrame } from "../phone-frame";
 
-const POINTS = [
-  {
-    icon: BookMarked,
-    title: "Anchor verse",
-    desc: "Choose the scripture you return to in the moment of temptation.",
-  },
-  {
-    icon: ShieldBan,
-    title: "Real-time intervention",
-    desc: "A pre-committed if-then replacement, the instant the urge hits.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Accountability partner",
-    desc: "An optional ally who sees your streak and verse — never your details.",
-  },
-] as const;
+const ICONS = [BookMarked, ShieldBan, HeartHandshake] as const;
 
 export function GospelBreakingHabits() {
+  const t = useTranslations("gospel.breakingHabits");
+
+  const points = ICONS.map((icon, i) => ({
+    icon,
+    title: t(`p${i + 1}Title`),
+    desc: t(`p${i + 1}Desc`),
+  }));
+
   return (
     <Section id="features" className="py-16 sm:py-24">
       <div className="grid items-center gap-12 rounded-3xl border border-accent/25 bg-accent/[0.06] p-8 sm:p-12 lg:grid-cols-2">
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-3 py-1.5 text-[12px] font-medium text-accent-text">
             <Shield className="h-3.5 w-3.5" aria-hidden />
-            Breaking Habits
+            {t("badge")}
           </span>
           <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-fg sm:text-4xl">
-            Scripture-anchored intervention at your hardest moment.
+            {t("heading")}
           </h2>
-          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-fg-secondary">
-            Not a streak counter. A daily covenant — built on the verse you choose — that meets you
-            the moment temptation hits, and a community that helps you rise again when you fall.
-          </p>
+          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-fg-secondary">{t("body")}</p>
           <ul className="mt-8 space-y-3">
-            {POINTS.map((p) => (
+            {points.map((p) => (
               <li
                 key={p.title}
                 className="flex items-start gap-4 rounded-2xl border border-divider bg-bg p-4"
@@ -69,10 +55,7 @@ export function GospelBreakingHabits() {
         </Reveal>
 
         <Reveal delay={60} className="flex justify-center">
-          <PhoneFrame
-            src="/gospel/habit.png"
-            alt="The IshGospel Breaking Habits screen with anchor verse and streak"
-          />
+          <PhoneFrame src="/gospel/habit.png" alt={t("habitAlt")} />
         </Reveal>
       </div>
     </Section>

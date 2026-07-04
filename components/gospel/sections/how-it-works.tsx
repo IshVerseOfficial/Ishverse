@@ -1,51 +1,43 @@
 /**
  * Module: GospelHowItWorks
  * Context: Ported from ishgospel-web — voice "Show up. Reflect. Grow."
- *
- * Three-step explainer of the daily loop. Numbered cards, responsive 1→3 cols.
+ * Localized (Phase 4).
  *
  * Exports:
  *   GospelHowItWorks — server component
  */
 
+import { useTranslations } from "next-intl";
 import { CalendarCheck, PenLine, Sprout } from "lucide-react";
 import { Section } from "../../ui/section";
 import { Reveal } from "../../reveal";
 
-const STEPS = [
-  {
-    icon: CalendarCheck,
-    title: "Show up",
-    desc: "Open the app to read, pray, or sit with scripture. A small, repeatable daily block.",
-  },
-  {
-    icon: PenLine,
-    title: "Reflect",
-    desc: "Journal what you noticed. Mark the day. Honesty over performance — every time.",
-  },
-  {
-    icon: Sprout,
-    title: "Grow",
-    desc: "Consistency compounds. Your formation deepens, your streak holds, your community sees it.",
-  },
-] as const;
+const ICONS = [CalendarCheck, PenLine, Sprout] as const;
 
 export function GospelHowItWorks() {
+  const t = useTranslations("gospel.howItWorks");
+
+  const steps = ICONS.map((icon, i) => ({
+    icon,
+    title: t(`step${i + 1}Title`),
+    desc: t(`step${i + 1}Desc`),
+  }));
+
   return (
     <Section className="py-16 sm:py-24">
       <Reveal>
         <div className="mx-auto max-w-xl text-center">
           <p className="text-[13px] font-medium uppercase tracking-wide text-accent-text">
-            How it works
+            {t("eyebrow")}
           </p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-fg sm:text-4xl">
-            Show up. Reflect. Grow.
+            {t("heading")}
           </h2>
         </div>
       </Reveal>
 
       <div className="mt-12 grid gap-4 md:grid-cols-3">
-        {STEPS.map((s, i) => (
+        {steps.map((s, i) => (
           <Reveal key={s.title} delay={i * 60} className="h-full">
             <div className="h-full rounded-2xl border border-divider bg-surface p-6">
               <div className="flex items-center justify-between">
