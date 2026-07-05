@@ -10,7 +10,7 @@
  *      in the public URL is preserved in front of the product segment. Paths
  *      that already carry the product segment (e.g. from a locale switch) are
  *      tolerated as-is.
- *   2. Legal paths on product subdomains 308-redirect to the company pages.
+ *   2. Legal paths on rize.* 308-redirect to company pages (gospel has its own).
  *   3. next-intl then resolves the locale (localePrefix "as-needed", no
  *      auto-detect redirects — language changes only via the switcher).
  *
@@ -26,7 +26,8 @@ import { routing, locales, type Locale } from "./i18n/routing";
 const handleI18nRouting = createMiddleware({ ...routing, localeDetection: false });
 
 const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize"]);
-const COMPANY_LEGAL_PATHS = new Set(["/privacy", "/terms"]);
+// gospel has its own /privacy, /terms, /about pages — only redirect rize (no product pages there yet)
+const RIZE_LEGAL_PATHS = new Set(["/privacy", "/terms"]);
 
 export function middleware(req: NextRequest) {
   const host = (req.headers.get("host") ?? "").split(":")[0];
@@ -40,7 +41,7 @@ export function middleware(req: NextRequest) {
   const locale = hasLocale ? segments[1] : null;
   const rest = "/" + segments.slice(hasLocale ? 2 : 1).join("/");
 
-  if (COMPANY_LEGAL_PATHS.has(rest)) {
+  if (sub !== "gospel" && RIZE_LEGAL_PATHS.has(rest)) {
     return NextResponse.redirect(`https://ishverse.com${rest}`, 308);
   }
 
