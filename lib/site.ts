@@ -41,10 +41,10 @@ export const siteConfig = {
     {
       name: "IshRize",
       wordmark: { strong: "ISH", light: "RIZE" },
-      domain: "Academic discipline",
-      oneLiner: "A structured system for academic discipline.",
+      domain: "Scheduling & attendance",
+      oneLiner: "Live, clash-free timetables and QR attendance for institutions.",
       href: "https://rize.ishverse.com",
-      status: "soon",
+      status: "live",
     },
   ] as Product[],
 } as const;

@@ -285,11 +285,119 @@
     }
   },
   "rize": {
-    "soon": "Próximamente",
-    "body": "Un sistema estructurado de disciplina académica. La misma filosofía que IshGospel. El mismo rigor de diseño. Un dominio distinto.",
-    "notify": "Avísame",
-    "meet": "Conoce IshVerse",
-    "metaTitle": "IshRize — Próximamente",
-    "metaDescription": "Un sistema estructurado de disciplina académica. Parte del ecosistema Ish."
+    "_note": "TODO: translate from en",
+    "meta": {
+      "title": "IshRize — Scheduling intelligence for institutions",
+      "description": "Import your timetables, detect clashes automatically, and track attendance in real time. Built for universities, designed for any organization.",
+      "tagline": "Disciplined growth through structure."
+    },
+    "nav": {
+      "features": "Features",
+      "howItWorks": "How it works",
+      "institutions": "For institutions",
+      "signIn": "Sign in",
+      "requestDemo": "Request demo",
+      "requestDemoShort": "Demo"
+    },
+    "hero": {
+      "badge": "Part of the IshVerse ecosystem",
+      "headline": "One timetable. Every department. No clashes.",
+      "subheadline": "IshRize turns your institution's spreadsheet chaos into a live, clash-free timetable — imported from the files you already have, edited collaboratively in real time, with attendance built in.",
+      "ctaDemo": "Request a demo",
+      "ctaDashboard": "Open dashboard",
+      "trustImport": "Imports Excel and PDF",
+      "trustRealtime": "Real-time collaboration",
+      "trustReview": "Human review before commit"
+    },
+    "problem": {
+      "eyebrow": "The status quo",
+      "heading": "Every institution is running on spreadsheets.",
+      "pain1Title": "One file, one editor",
+      "pain1Desc": "The timetable lives in an Excel file that only one person can safely touch. Everyone else works from stale copies.",
+      "pain2Title": "Clashes found too late",
+      "pain2Desc": "Venue and lecturer conflicts are checked by eye — and discovered by students after the schedule is published.",
+      "pain3Title": "Attendance on paper",
+      "pain3Desc": "Sign-in sheets and ad-hoc lists that never reconcile with the actual sessions on the timetable.",
+      "pain4Title": "Every change cascades",
+      "pain4Desc": "Moving one session means phone calls to every affected department — and hoping nobody misses the memo."
+    },
+    "howItWorks": {
+      "eyebrow": "How it works",
+      "heading": "From import to live in three steps.",
+      "step1Title": "Import",
+      "step1Desc": "Upload your existing Excel or PDF timetable. AI handles messy formats and scanned documents; you review every row before anything is committed.",
+      "step2Title": "Edit",
+      "step2Desc": "Drag and drop the master timetable. Departments decompose slots into real sessions, and clash detection fires automatically as you work.",
+      "step3Title": "Run",
+      "step3Desc": "Lecturers open sessions, students scan QR codes, and attendance analytics update in real time."
+    },
+    "features": {
+      "eyebrow": "Scheduling intelligence",
+      "heading": "Scheduling intelligence for institutions.",
+      "intro": "The engine underneath is built for the way institutions actually schedule — departments, shared venues, cross-listed cohorts, and all.",
+      "item1Title": "Import from anything",
+      "item1Desc": "Excel, PDF, even scanned documents with OCR. A human review step before commit — no silent overwrites.",
+      "item2Title": "Live collaborative editing",
+      "item2Desc": "Real-time sync and drag-and-drop editing. Everyone sees changes instantly — no stale copies, no refresh.",
+      "item3Title": "Clash detection",
+      "item3Desc": "Venue conflicts, lecturer overlaps, and cross-department cohort clashes — flagged as they happen, resolved in one click.",
+      "item4Title": "Free space finder",
+      "item4Desc": "Surface free venues, open time slots, and unused rooms per term — before they become problems.",
+      "item5Title": "Coordinator Hub",
+      "item5Desc": "Teaching-load balance, course ownership, and lecturer management — self-service for departments, without routing through central admin."
+    },
+    "attendance": {
+      "eyebrow": "Attendance",
+      "heading": "Attendance that works the way your sessions do.",
+      "intro": "Attendance is built on top of the timetable, not beside it — every session is tied to a scheduled slot, so records and reality never drift apart.",
+      "surfaces": "Students check in from the mobile app. Lecturers and coordinators live in the web dashboard.",
+      "point1Title": "QR check-in",
+      "point1Desc": "Rotating QR tokens validated server-side — fraud-resistant by design.",
+      "point2Title": "Role-based access",
+      "point2Desc": "Student, lecturer, and admin roles with enrollment required before attendance can be marked.",
+      "point3Title": "Analytics and reports",
+      "point3Desc": "Attendance percentages, session history, course-level breakdowns, and exportable reports."
+    },
+    "audiences": {
+      "eyebrow": "Who it's for",
+      "heading": "Built for every role in the institution.",
+      "registrarTitle": "Registrar / Academic Affairs",
+      "registrarLead": "Own the institution-wide picture.",
+      "registrarPoint1": "Manage the master timetable across every department",
+      "registrarPoint2": "See and resolve clashes before schedules are published",
+      "registrarPoint3": "Institution-wide view of venues, terms, and load",
+      "coordinatorTitle": "Department coordinator",
+      "coordinatorLead": "Run your department without waiting on central admin.",
+      "coordinatorPoint1": "Manage lecturers and course ownership in the Coordinator Hub",
+      "coordinatorPoint2": "Decompose master slots into real sessions",
+      "coordinatorPoint3": "Balance teaching load across your department",
+      "lecturerTitle": "Lecturer",
+      "lecturerLead": "Your schedule and your sessions, in one place.",
+      "lecturerPoint1": "See your personal timetable across organizations",
+      "lecturerPoint2": "Open attendance sessions tied to scheduled slots",
+      "lecturerPoint3": "View analytics for your own courses"
+    },
+    "orgNeutral": {
+      "eyebrow": "Architecture",
+      "heading": "Built for universities. Ready for what's next.",
+      "configTitle": "Org-neutral by configuration",
+      "configDesc": "The same engines that run a university's departments, courses, and lecturers can run a church's ministries, services, and hosts — by swapping vocabulary and configuration, not code.",
+      "multiOrgTitle": "Multi-organization built in",
+      "multiOrgDesc": "One account can belong to several organizations, with a single unified personal timetable across all of them."
+    },
+    "finalCta": {
+      "heading": "Your institution doesn't have to run on spreadsheets.",
+      "body": "Import what you have. Start managing what matters.",
+      "ctaDemo": "Request a demo",
+      "ctaIshverse": "Learn about IshVerse"
+    },
+    "footer": {
+      "groupProduct": "Product",
+      "groupCompany": "Company",
+      "linkPrivacy": "Privacy",
+      "linkTerms": "Terms",
+      "linkSupport": "Support",
+      "rights": "All rights reserved."
+    }
   }
 }
