@@ -56,5 +56,7 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|.*\\..*).*)"],
+  // "app" excluded so rize.ishverse.com/app/* bypasses this middleware
+  // and falls through to the beforeFiles rewrite in next.config.ts.
+  matcher: ["/((?!_next|api|app|.*\\..*).*)"],
 };
