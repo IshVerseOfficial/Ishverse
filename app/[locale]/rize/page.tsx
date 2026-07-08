@@ -36,6 +36,7 @@ export async function generateMetadata({
     title,
     description: t("description"),
     alternates: { canonical: rizeConfig.url },
+    icons: { icon: "/ishrize-logo.png" },
     robots: { index: true },
     openGraph: {
       type: "website",
