@@ -46,10 +46,10 @@ export function Hero() {
                 <ArrowUpRight className="h-4 w-4" aria-hidden />
               </a>
               <a
-                href="#products"
+                href={siteConfig.products[1].href}
                 className="inline-flex items-center gap-2 rounded-[10px] border border-divider bg-glass-bg px-5 py-3 text-[14px] text-fg-secondary transition-colors hover:text-fg"
               >
-                {t("hero.rize")} <span className="text-gold-text">· {t("hero.comingSoon")}</span>
+                {t("hero.rize")} <span className="text-gold-text">· {t("hero.live")}</span>
               </a>
             </div>
           </Reveal>
