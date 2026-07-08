@@ -29,7 +29,7 @@ const LANGUAGES: LangMeta[] = [
   { code: "en", flag: "🇬🇧", nativeName: "English", englishName: "English" },
   { code: "es", flag: "🇪🇸", nativeName: "Español", englishName: "Spanish" },
   { code: "fr", flag: "🇫🇷", nativeName: "Français", englishName: "French" },
-  { code: "pt", flag: "🇧🇷", nativeName: "Português", englishName: "Portuguese" },
+  { code: "pt", flag: "🇵🇹", nativeName: "Português", englishName: "Portuguese" },
 ];
 
 const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize"]);
