@@ -5,14 +5,16 @@
  * (Phase 4).
  *
  * Order of operations:
- *   1. Product subdomains (gospel.*, rize.*) get their path rewritten to the
- *      internal segment: gospel.ishverse.com/es → /es/gospel. A locale prefix
- *      in the public URL is preserved in front of the product segment. Paths
- *      that already carry the product segment (e.g. from a locale switch) are
- *      tolerated as-is.
- *   2. Legal paths on product subdomains 308-redirect to the company pages.
- *   3. next-intl then resolves the locale (localePrefix "as-needed", no
- *      auto-detect redirects — language changes only via the switcher).
+ *   1. Product subdomains (gospel.*, rize.*) rewrite the path to the internal
+ *      segment: gospel.ishverse.com/es → internal /es/gospel. The locale
+ *      prefix in the public URL is preserved ahead of the product segment.
+ *      Rewriting is done with NextResponse.rewrite() directly — NOT via
+ *      handleI18nRouting — so that next-intl's own middleware cannot interfere
+ *      with the already-correct internal path (it was redirecting product
+ *      subdomain requests back to the root locale page).
+ *   2. Legal paths on rize.* 308-redirect to company pages (gospel has its own).
+ *   3. Main domain (ishverse.com) passes through next-intl's middleware as
+ *      normal.
  *
  * Exports:
  *   middleware — subdomain router + locale resolution
@@ -21,26 +23,28 @@
 
 import { NextRequest, NextResponse } from "next/server";
 import createMiddleware from "next-intl/middleware";
-import { routing, locales, type Locale } from "./i18n/routing";
+import { routing, locales, defaultLocale, type Locale } from "./i18n/routing";
 
 const handleI18nRouting = createMiddleware({ ...routing, localeDetection: false });
 
 const PRODUCT_SUBDOMAINS = new Set(["gospel", "rize"]);
-const COMPANY_LEGAL_PATHS = new Set(["/privacy", "/terms"]);
+// gospel has its own /privacy, /terms, /about pages — only redirect rize
+const RIZE_LEGAL_PATHS = new Set(["/privacy", "/terms"]);
 
 export function middleware(req: NextRequest) {
   const host = (req.headers.get("host") ?? "").split(":")[0];
   const sub = host.split(".")[0];
 
+  // Main domain — hand off to next-intl entirely.
   if (!PRODUCT_SUBDOMAINS.has(sub)) return handleI18nRouting(req);
 
-  // Split an optional leading locale off the public path.
+  // Product subdomains — build the internal path ourselves.
   const segments = req.nextUrl.pathname.split("/");
   const hasLocale = locales.includes(segments[1] as Locale);
-  const locale = hasLocale ? segments[1] : null;
+  const locale = hasLocale ? (segments[1] as Locale) : null;
   const rest = "/" + segments.slice(hasLocale ? 2 : 1).join("/");
 
-  if (COMPANY_LEGAL_PATHS.has(rest)) {
+  if (sub !== "gospel" && RIZE_LEGAL_PATHS.has(rest)) {
     return NextResponse.redirect(`https://ishverse.com${rest}`, 308);
   }
 
@@ -49,11 +53,26 @@ export function middleware(req: NextRequest) {
   const internal =
     (locale ? `/${locale}` : "") + (needsSegment ? `/${sub}${rest === "/" ? "" : rest}` : rest);
 
+  // Rewrite directly. Passing the rewritten request through handleI18nRouting
+  // caused it to strip the product path segment and serve the wrong page.
   const url = req.nextUrl.clone();
   url.pathname = internal;
-  return handleI18nRouting(new NextRequest(url, req));
+  const response = NextResponse.rewrite(url);
+
+  // Mirror the NEXT_LOCALE cookie that next-intl normally sets so that
+  // useLocale() and getLocale() in client components stay consistent.
+  const resolvedLocale = locale ?? defaultLocale;
+  response.cookies.set("NEXT_LOCALE", resolvedLocale, {
+    path: "/",
+    maxAge: 60 * 60 * 24 * 365,
+    sameSite: "lax",
+  });
+
+  return response;
 }
 
 export const config = {
-  matcher: ["/((?!_next|api|.*\\..*).*)"],
+  // "app" excluded so rize.ishverse.com/app/* bypasses this middleware
+  // and falls through to the beforeFiles rewrite in next.config.ts.
+  matcher: ["/((?!_next|api|app|.*\\..*).*)"],
 };

@@ -1,18 +1,27 @@
 /**
- * Module: IshRize Coming Soon Page
- * Context: See DESIGN.md §10 + implementation_plan.md Phase 3 — one calm
- * screen at rize.ishverse.com (via middleware subdomain rewrite). Localized
- * (Phase 4).
+ * Module: IshRize Landing Page
+ * Context: See middleware.ts — served at rize.ishverse.com via subdomain
+ * rewrite. Full product landing page (replaces the Phase 3 coming-soon
+ * screen); spec in ish-rize-docs/ishrize-landing-prompt.md. Localized.
  *
  * Exports:
- *   generateMetadata — localized SEO metadata
- *   default          — RizeComingSoon
+ *   generateMetadata — localized SEO metadata (canonical on the rize subdomain)
+ *   default          — RizeHome
  */
 
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { NeuralField } from "@/components/neural-field";
-import { siteConfig } from "@/lib/site";
+import { RizeSiteHeader } from "@/components/rize/site-header";
+import { RizeSiteFooter } from "@/components/rize/site-footer";
+import { RizeHero } from "@/components/rize/sections/hero";
+import { RizeProblem } from "@/components/rize/sections/problem";
+import { RizeHowItWorks } from "@/components/rize/sections/how-it-works";
+import { RizeFeatures } from "@/components/rize/sections/features";
+import { RizeAttendance } from "@/components/rize/sections/attendance";
+import { RizeAudiences } from "@/components/rize/sections/audiences";
+import { RizeOrgNeutral } from "@/components/rize/sections/org-neutral";
+import { RizeFinalCta } from "@/components/rize/sections/final-cta";
+import { rizeConfig } from "@/lib/rize";
 
 export async function generateMetadata({
   params,
@@ -20,49 +29,48 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "rize" });
+  const t = await getTranslations({ locale, namespace: "rize.meta" });
+  const title = t("title");
+
   return {
-    title: t("metaTitle"),
-    description: t("metaDescription"),
-    alternates: { canonical: "https://rize.ishverse.com" },
-    robots: { index: false },
+    title,
+    description: t("description"),
+    alternates: { canonical: rizeConfig.url },
+    robots: { index: true },
+    openGraph: {
+      type: "website",
+      title,
+      description: t("description"),
+      url: rizeConfig.url,
+      siteName: rizeConfig.name,
+      locale,
+    },
+    twitter: {
+      card: "summary",
+      title,
+      description: t("description"),
+    },
   };
 }
 
-export default async function RizeComingSoon({ params }: { params: Promise<{ locale: string }> }) {
+export default async function RizeHome({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations({ locale, namespace: "rize" });
 
   return (
-    <main className="relative flex min-h-svh flex-col items-center justify-center overflow-hidden px-6 text-center">
-      <NeuralField />
-      <div className="relative">
-        <p className="text-xs font-semibold uppercase tracking-wider text-fg-secondary">
-          {siteConfig.name}
-        </p>
-        <h1 className="mt-4 text-5xl font-bold tracking-tight md:text-6xl">
-          ISH<span className="font-normal text-fg-secondary">RIZE</span>
-        </h1>
-        <p className="mt-2 text-sm font-medium text-gold-text">{t("soon")}</p>
-        <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-fg-secondary">
-          {t("body")}
-        </p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-          <a
-            href={`mailto:${siteConfig.contactEmail}?subject=IshRize%20waitlist`}
-            className="inline-flex items-center gap-2 rounded-[10px] bg-accent px-5 py-3 text-[14px] font-medium text-accent-on transition-colors hover:bg-accent-dark"
-          >
-            {t("notify")}
-          </a>
-          <a
-            href="https://ishverse.com"
-            className="inline-flex items-center gap-2 rounded-[10px] border border-divider bg-glass-bg px-5 py-3 text-[14px] text-fg-secondary transition-colors hover:text-fg"
-          >
-            {t("meet")}
-          </a>
-        </div>
-      </div>
-    </main>
+    <>
+      <RizeSiteHeader />
+      <main>
+        <RizeHero />
+        <RizeProblem />
+        <RizeHowItWorks />
+        <RizeFeatures />
+        <RizeAttendance />
+        <RizeAudiences />
+        <RizeOrgNeutral />
+        <RizeFinalCta />
+      </main>
+      <RizeSiteFooter />
+    </>
   );
 }

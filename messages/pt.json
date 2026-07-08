@@ -285,11 +285,118 @@
     }
   },
   "rize": {
-    "soon": "Em breve",
-    "body": "Um sistema estruturado de disciplina acadêmica. A mesma filosofia do IshGospel. O mesmo rigor de design. Um domínio diferente.",
-    "notify": "Avise-me",
-    "meet": "Conheça a IshVerse",
-    "metaTitle": "IshRize — Em breve",
-    "metaDescription": "Um sistema estruturado de disciplina acadêmica. Parte do ecossistema Ish."
+    "meta": {
+      "title": "IshRize — Inteligência de horários para instituições",
+      "description": "Importe seus horários, detecte conflitos automaticamente e acompanhe a presença em tempo real. Criado para universidades, adaptado para qualquer organização.",
+      "tagline": "Crescimento disciplinado através da estrutura."
+    },
+    "nav": {
+      "features": "Funcionalidades",
+      "howItWorks": "Como funciona",
+      "institutions": "Para instituições",
+      "signIn": "Entrar",
+      "requestDemo": "Solicitar demo",
+      "requestDemoShort": "Demo"
+    },
+    "hero": {
+      "badge": "Parte do ecossistema IshVerse",
+      "headline": "Um horário. Todos os departamentos. Sem conflitos.",
+      "subheadline": "O IshRize transforma o caos de planilhas da sua instituição em um horário ao vivo sem conflitos — importado dos arquivos que você já tem, editado de forma colaborativa em tempo real, com controle de presença integrado.",
+      "ctaDemo": "Solicitar uma demo",
+      "ctaDashboard": "Abrir painel",
+      "trustImport": "Importa Excel e PDF",
+      "trustRealtime": "Colaboração em tempo real",
+      "trustReview": "Revisão humana antes de confirmar"
+    },
+    "problem": {
+      "eyebrow": "O status quo",
+      "heading": "Todas as instituições funcionam com planilhas.",
+      "pain1Title": "Um arquivo, um editor",
+      "pain1Desc": "O horário vive em um arquivo Excel que apenas uma pessoa pode editar com segurança. Todos os outros trabalham com cópias desatualizadas.",
+      "pain2Title": "Conflitos detectados tarde demais",
+      "pain2Desc": "Conflitos de sala e professor são verificados manualmente — e descobertos pelos alunos depois que o horário é publicado.",
+      "pain3Title": "Presença no papel",
+      "pain3Desc": "Listas de assinatura e registros improvisados que nunca são reconciliados com as aulas reais do horário.",
+      "pain4Title": "Cada mudança gera efeitos em cascata",
+      "pain4Desc": "Mover uma aula exige ligar para cada departamento afetado — e torcer para que ninguém perca o aviso."
+    },
+    "howItWorks": {
+      "eyebrow": "Como funciona",
+      "heading": "Da importação ao horário ativo em três etapas.",
+      "step1Title": "Importar",
+      "step1Desc": "Faça upload do seu horário Excel ou PDF existente. A IA lida com formatos complexos e documentos digitalizados; você revisa cada linha antes de confirmar.",
+      "step2Title": "Editar",
+      "step2Desc": "Arraste e reorganize o horário mestre. Os departamentos decompõem os blocos em aulas reais, e a detecção de conflitos é ativada automaticamente.",
+      "step3Title": "Executar",
+      "step3Desc": "Os professores abrem as aulas, os alunos escaneiam os QR codes e as estatísticas de presença são atualizadas em tempo real."
+    },
+    "features": {
+      "eyebrow": "Inteligência de horários",
+      "heading": "Inteligência de horários para instituições.",
+      "intro": "O motor por baixo foi criado para a forma como as instituições realmente planejam: departamentos, salas compartilhadas, grupos interdepartamentais e muito mais.",
+      "item1Title": "Importa de qualquer formato",
+      "item1Desc": "Excel, PDF, até documentos digitalizados com OCR. Uma etapa de revisão humana antes de confirmar — sem substituições silenciosas.",
+      "item2Title": "Edição colaborativa em tempo real",
+      "item2Desc": "Sincronização em tempo real e edição por arrastar e soltar. Todos veem as alterações instantaneamente — sem cópias desatualizadas.",
+      "item3Title": "Detecção de conflitos",
+      "item3Desc": "Conflitos de sala, sobreposição de professores e choques entre grupos de departamentos diferentes — sinalizados em tempo real, resolvidos com um clique.",
+      "item4Title": "Buscador de espaços livres",
+      "item4Desc": "Encontre salas disponíveis, horários livres e espaços sem uso por período — antes que se tornem problemas.",
+      "item5Title": "Hub do coordenador",
+      "item5Desc": "Equilíbrio de carga docente, titularidade de cursos e gestão de professores — autosserviço para departamentos, sem passar pela administração central."
+    },
+    "attendance": {
+      "eyebrow": "Presença",
+      "heading": "Controle de presença que funciona como suas aulas.",
+      "intro": "O controle de presença é construído sobre o horário, não ao lado dele — cada aula está vinculada a um bloco programado, para que os registros e a realidade nunca se separem.",
+      "surfaces": "Os alunos fazem check-in pelo aplicativo móvel. Professores e coordenadores usam o painel web.",
+      "point1Title": "Check-in por QR",
+      "point1Desc": "Tokens QR rotativos validados no servidor — resistentes a fraudes por design.",
+      "point2Title": "Acesso baseado em função",
+      "point2Desc": "Funções de aluno, professor e administrador, com matrícula obrigatória antes de registrar presença.",
+      "point3Title": "Estatísticas e relatórios",
+      "point3Desc": "Percentuais de presença, histórico de aulas, detalhamento por curso e relatórios exportáveis."
+    },
+    "audiences": {
+      "eyebrow": "Para quem é",
+      "heading": "Criado para cada função na instituição.",
+      "registrarTitle": "Secretaria / Assuntos Acadêmicos",
+      "registrarLead": "Tenha a visão geral da instituição.",
+      "registrarPoint1": "Gerencie o horário mestre de todos os departamentos",
+      "registrarPoint2": "Visualize e resolva conflitos antes de publicar os horários",
+      "registrarPoint3": "Visão institucional de salas, períodos e carga acadêmica",
+      "coordinatorTitle": "Coordenador de departamento",
+      "coordinatorLead": "Gerencie seu departamento sem depender da administração central.",
+      "coordinatorPoint1": "Administre professores e cursos no Hub do coordenador",
+      "coordinatorPoint2": "Decomponha blocos mestres em aulas reais",
+      "coordinatorPoint3": "Equilibre a carga docente no seu departamento",
+      "lecturerTitle": "Professor",
+      "lecturerLead": "Seu horário e suas aulas, em um só lugar.",
+      "lecturerPoint1": "Consulte seu horário pessoal em todas as organizações",
+      "lecturerPoint2": "Abra aulas de presença vinculadas a blocos programados",
+      "lecturerPoint3": "Visualize estatísticas dos seus próprios cursos"
+    },
+    "orgNeutral": {
+      "eyebrow": "Arquitetura",
+      "heading": "Criado para universidades. Pronto para o que vem a seguir.",
+      "configTitle": "Neutro por configuração",
+      "configDesc": "Os mesmos motores que gerenciam os departamentos, cursos e professores de uma universidade podem gerenciar os ministérios, serviços e líderes de uma igreja — trocando vocabulário e configuração, não código.",
+      "multiOrgTitle": "Multi-organização integrado",
+      "multiOrgDesc": "Uma conta pode pertencer a várias organizações, com um horário pessoal unificado em todas elas."
+    },
+    "finalCta": {
+      "heading": "Sua instituição não precisa funcionar com planilhas.",
+      "body": "Importe o que você tem. Comece a gerenciar o que importa.",
+      "ctaDemo": "Solicitar uma demo",
+      "ctaIshverse": "Conhecer o IshVerse"
+    },
+    "footer": {
+      "groupProduct": "Produto",
+      "groupCompany": "Empresa",
+      "linkPrivacy": "Privacidade",
+      "linkTerms": "Termos",
+      "linkSupport": "Suporte",
+      "rights": "Todos os direitos reservados."
+    }
   }
 }
