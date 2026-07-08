@@ -235,7 +235,8 @@
     },
     "hero": {
       "rize": "IshRize",
-      "comingSoon": "bientôt"
+      "comingSoon": "bientôt",
+      "live": "disponible maintenant"
     },
     "products": {
       "eyebrow": "Produits",
