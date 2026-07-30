@@ -231,12 +231,14 @@
       "products": "Produits",
       "story": "Histoire",
       "contact": "Contact",
-      "explore": "Découvrir IshGospel"
+      "explore": "Découvrir {name}"
     },
     "hero": {
-      "rize": "IshRize",
-      "comingSoon": "bientôt",
-      "live": "disponible maintenant"
+      "headline": "Des systèmes pour une croissance intentionnelle.",
+      "sub": "Nous construisons un système de discipline par domaine de la vie : IshRize pour les emplois du temps et la présence à l'université, IshGospel pour la formation spirituelle. Un homme aux commandes de son monde.",
+      "explore": "Découvrir {name}",
+      "live": "disponible maintenant",
+      "comingSoon": "bientôt"
     },
     "products": {
       "eyebrow": "Produits",
@@ -248,7 +250,7 @@
       "gospelDomain": "Discipline spirituelle",
       "gospelLine": "Un système structuré de formation spirituelle.",
       "rizeDomain": "Discipline académique",
-      "rizeLine": "Un système structuré de discipline académique."
+      "rizeLine": "Des emplois du temps sans conflit et un suivi de présence, en direct dans chaque département."
     },
     "philosophy": {
       "eyebrow": "Le nom",

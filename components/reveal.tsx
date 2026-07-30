@@ -9,6 +9,14 @@
  * variants force the element visible with no transition) — a static
  * fallback, not a slower animation.
  *
+ * `immediate` is for content that is already in the viewport on load (the
+ * hero). The scroll variant server-renders at opacity-0 and only becomes
+ * visible once the bundle has downloaded, hydrated and the observer has
+ * fired — which makes an above-the-fold heading an LCP candidate gated on
+ * JavaScript. `immediate` instead paints at full opacity and animates
+ * transform only, via CSS, so first paint is complete and LCP is unaffected.
+ * Use it for anything above the fold; use the default everywhere else.
+ *
  * Exports:
  *   Reveal — client wrapper div
  */
@@ -21,15 +29,18 @@ export function Reveal({
   children,
   delay = 0,
   className = "",
+  immediate = false,
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
+  immediate?: boolean;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(false);
 
   useEffect(() => {
+    if (immediate) return;
     const el = ref.current;
     if (!el) return;
     const io = new IntersectionObserver(
@@ -43,7 +54,20 @@ export function Reveal({
     );
     io.observe(el);
     return () => io.disconnect();
-  }, []);
+  }, [immediate]);
+
+  // Painted opaque from the server; only the transform animates, so this
+  // never delays the first contentful paint of whatever it wraps.
+  if (immediate) {
+    return (
+      <div
+        style={{ animationDelay: `${delay}ms` }}
+        className={`animate-[reveal-rise_500ms_cubic-bezier(0.16,1,0.3,1)_both] motion-reduce:animate-none ${className}`}
+      >
+        {children}
+      </div>
+    );
+  }
 
   return (
     <div
