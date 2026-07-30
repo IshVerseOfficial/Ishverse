@@ -294,6 +294,7 @@
     "nav": {
       "features": "Features",
       "howItWorks": "How it works",
+      "engine": "Engine",
       "institutions": "For institutions",
       "signIn": "Sign in",
       "requestDemo": "Request demo",
@@ -308,6 +309,16 @@
       "trustImport": "Imports Excel and PDF",
       "trustRealtime": "Real-time collaboration",
       "trustReview": "Human review before commit"
+    },
+    "grid": {
+      "day1": "Mon",
+      "day2": "Tue",
+      "day3": "Wed",
+      "day4": "Thu",
+      "day5": "Fri",
+      "legendPlaced": "Scheduled session",
+      "legendMoving": "Being moved",
+      "legendFree": "Free slot"
     },
     "problem": {
       "eyebrow": "The status quo",
@@ -345,6 +356,32 @@
       "item4Desc": "Surface free venues, open time slots, and unused rooms per term — before they become problems.",
       "item5Title": "Coordinator Hub",
       "item5Desc": "Teaching-load balance, course ownership, and lecturer management — self-service for departments, without routing through central admin."
+    },
+    "engine": {
+      "eyebrow": "Under the hood",
+      "heading": "Four engines doing the work.",
+      "intro": "IshRize is not a spreadsheet with a nicer interface. Each part of the scheduling problem is handled by a dedicated engine, and all of them run against the same live data.",
+      "engine1Name": "INGESTION",
+      "engine1Title": "Reads the timetables you already have",
+      "engine1Desc": "A positional parser that rebuilds a timetable's grid from the coordinates of the text on the page, so dense multi-column university PDFs arrive as structured slots instead of scrambled lines.",
+      "engine2Name": "CLASH",
+      "engine2Title": "Knows what cannot happen at once",
+      "engine2Desc": "Venue double-bookings, lecturer overlaps and cohort collisions across departments, evaluated continuously as the timetable changes rather than in a check at the end.",
+      "engine3Name": "AVAILABILITY",
+      "engine3Title": "Finds the space you did not know you had",
+      "engine3Desc": "Free venues, open time slots and rooms sitting unused for a whole term, surfaced on demand and filtered by capacity and department.",
+      "engine4Name": "REALTIME",
+      "engine4Title": "Keeps everyone on the same timetable",
+      "engine4Desc": "Every change broadcasts over a live socket. Two coordinators editing at once see each other's work immediately, with no refresh and no conflicting copies.",
+      "nextBadge": "In development",
+      "nextHeading": "The scheduling solver",
+      "nextIntro": "Detection is solved. Generation is what we are building now, turning the timetable from something you assemble into something you describe.",
+      "next1Title": "Constraint-based generation",
+      "next1Desc": "A graph-coloring and constraint-optimization solver that produces a complete, clash-free timetable across departments, venues and cohorts.",
+      "next2Title": "Constraints in plain language",
+      "next2Desc": "Say that a lecturer cannot teach before 10am, or that a course needs a lab with 40 seats, and have it become a formal rule the solver enforces.",
+      "next3Title": "Decisions you can question",
+      "next3Desc": "Every placement comes with the reason it was made, so a coordinator can challenge the timetable instead of accepting it."
     },
     "attendance": {
       "eyebrow": "Attendance",
