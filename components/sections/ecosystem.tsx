@@ -16,13 +16,15 @@ import { siteConfig } from "@/lib/site";
 export function Ecosystem() {
   const t = useTranslations("company.products");
 
+  // Copy is keyed off p.id, not a name comparison — a third product used to
+  // silently inherit IshRize's domain and one-liner via the else branch.
   const products: LocalizedProduct[] = siteConfig.products.map((p) => ({
     name: p.name,
     wordmark: p.wordmark,
     href: p.href,
     status: p.status,
-    domain: p.name === "IshGospel" ? t("gospelDomain") : t("rizeDomain"),
-    oneLiner: p.name === "IshGospel" ? t("gospelLine") : t("rizeLine"),
+    domain: t(`${p.id}Domain`),
+    oneLiner: t(`${p.id}Line`),
     labels: {
       visit: t("visit", { name: p.name }),
       live: t("live"),

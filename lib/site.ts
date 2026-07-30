@@ -11,11 +11,15 @@
  *   Product    — the shape of one ecosystem product entry
  */
 
+/**
+ * `id` keys this product's copy in the message catalogs (`company.products`
+ * uses `<id>Domain` / `<id>Line`). The domain and one-liner deliberately do
+ * NOT live here — they are per-locale strings and belong in `messages/`.
+ */
 export type Product = {
+  id: string;
   name: string;
   wordmark: { strong: string; light: string };
-  domain: string;
-  oneLiner: string;
   href: string;
   status: "live" | "soon";
 };
@@ -31,18 +35,16 @@ export const siteConfig = {
   supportEmail: "support@ishverse.com",
   products: [
     {
+      id: "gospel",
       name: "IshGospel",
       wordmark: { strong: "ISH", light: "GOSPEL" },
-      domain: "Spiritual discipline",
-      oneLiner: "A structured system for spiritual formation.",
       href: "https://gospel.ishverse.com",
       status: "live",
     },
     {
+      id: "rize",
       name: "IshRize",
       wordmark: { strong: "ISH", light: "RIZE" },
-      domain: "Scheduling & attendance",
-      oneLiner: "Live, clash-free timetables and QR attendance for institutions.",
       href: "https://rize.ishverse.com",
       status: "live",
     },

@@ -99,3 +99,16 @@ body {
     scroll-behavior: auto;
   }
 }
+
+/* Above-the-fold entrance (see components/reveal.tsx, `immediate` mode).
+   Deliberately animates transform only — never opacity — so the element is
+   fully painted on the first frame and the LCP candidate is not gated on
+   JavaScript. The scroll-triggered variant may fade, this one may not. */
+@keyframes reveal-rise {
+  from {
+    transform: translateY(16px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

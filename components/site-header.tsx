@@ -55,7 +55,7 @@ export function SiteHeader() {
             href={flagship.href}
             className="inline-flex items-center gap-2 rounded-[10px] bg-fg px-4 py-2.5 text-[13px] font-medium text-bg transition-opacity hover:opacity-90"
           >
-            <span className="hidden sm:inline">{t("explore")}</span>
+            <span className="hidden sm:inline">{t("explore", { name: flagship.name })}</span>
             <span className="sm:hidden">{flagship.name}</span>
             <ArrowUpRight className="h-4 w-4" aria-hidden />
           </a>
