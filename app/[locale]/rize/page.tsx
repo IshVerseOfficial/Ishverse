@@ -17,6 +17,7 @@ import { RizeHero } from "@/components/rize/sections/hero";
 import { RizeProblem } from "@/components/rize/sections/problem";
 import { RizeHowItWorks } from "@/components/rize/sections/how-it-works";
 import { RizeFeatures } from "@/components/rize/sections/features";
+import { RizeEngine } from "@/components/rize/sections/engine";
 import { RizeAttendance } from "@/components/rize/sections/attendance";
 import { RizeAudiences } from "@/components/rize/sections/audiences";
 import { RizeOrgNeutral } from "@/components/rize/sections/org-neutral";
@@ -66,6 +67,7 @@ export default async function RizeHome({ params }: { params: Promise<{ locale: s
         <RizeProblem />
         <RizeHowItWorks />
         <RizeFeatures />
+        <RizeEngine />
         <RizeAttendance />
         <RizeAudiences />
         <RizeOrgNeutral />

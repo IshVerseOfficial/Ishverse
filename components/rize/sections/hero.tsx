@@ -14,6 +14,7 @@
 import { useTranslations } from "next-intl";
 import { ArrowRight, CalendarCheck2, Mail, RadioTower, ShieldCheck } from "lucide-react";
 import { NeuralField } from "../../neural-field";
+import { RizeTimetableGrid } from "../timetable-grid";
 import { rizeConfig } from "@/lib/rize";
 
 export function RizeHero() {
@@ -72,6 +73,8 @@ export function RizeHero() {
             </span>
           ))}
         </div>
+
+        <RizeTimetableGrid />
       </div>
     </section>
   );

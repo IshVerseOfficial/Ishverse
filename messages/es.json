@@ -294,6 +294,7 @@
     "nav": {
       "features": "Funciones",
       "howItWorks": "Cómo funciona",
+      "engine": "Motor",
       "institutions": "Para instituciones",
       "signIn": "Iniciar sesión",
       "requestDemo": "Solicitar demo",
@@ -308,6 +309,16 @@
       "trustImport": "Importa Excel y PDF",
       "trustRealtime": "Colaboración en tiempo real",
       "trustReview": "Revisión humana antes de confirmar"
+    },
+    "grid": {
+      "day1": "Lun",
+      "day2": "Mar",
+      "day3": "Mié",
+      "day4": "Jue",
+      "day5": "Vie",
+      "legendPlaced": "Sesión programada",
+      "legendMoving": "En movimiento",
+      "legendFree": "Franja libre"
     },
     "problem": {
       "eyebrow": "El estado actual",
@@ -345,6 +356,32 @@
       "item4Desc": "Encuentra aulas disponibles, horarios libres y salas sin uso por período — antes de que se conviertan en problemas.",
       "item5Title": "Centro de coordinación",
       "item5Desc": "Equilibrio de carga docente, titularidad de cursos y gestión de docentes — autoservicio para departamentos, sin pasar por administración central."
+    },
+    "engine": {
+      "eyebrow": "Por dentro",
+      "heading": "Cuatro motores haciendo el trabajo.",
+      "intro": "IshRize no es una hoja de cálculo con una interfaz más bonita. Cada parte del problema de programación la resuelve un motor dedicado, y todos operan sobre los mismos datos en vivo.",
+      "engine1Name": "INGESTA",
+      "engine1Title": "Lee los horarios que ya tienes",
+      "engine1Desc": "Un analizador posicional que reconstruye la cuadrícula del horario a partir de las coordenadas del texto en la página, para que los PDF universitarios densos y de varias columnas entren como franjas estructuradas y no como líneas desordenadas.",
+      "engine2Name": "CONFLICTOS",
+      "engine2Title": "Sabe qué no puede ocurrir a la vez",
+      "engine2Desc": "Aulas duplicadas, solapamientos de docentes y colisiones de cohortes entre departamentos, evaluados de forma continua mientras cambia el horario y no en una comprobación final.",
+      "engine3Name": "DISPONIBILIDAD",
+      "engine3Title": "Encuentra el espacio que no sabías que tenías",
+      "engine3Desc": "Aulas libres, franjas abiertas y salas sin usar durante todo un periodo, mostradas al momento y filtradas por capacidad y departamento.",
+      "engine4Name": "TIEMPO REAL",
+      "engine4Title": "Mantiene a todos en el mismo horario",
+      "engine4Desc": "Cada cambio se transmite por un socket en vivo. Dos coordinadores editando a la vez ven el trabajo del otro al instante, sin recargar y sin copias en conflicto.",
+      "nextBadge": "En desarrollo",
+      "nextHeading": "El solucionador de horarios",
+      "nextIntro": "La detección ya está resuelta. Ahora construimos la generación: convertir el horario en algo que describes en lugar de algo que montas.",
+      "next1Title": "Generación por restricciones",
+      "next1Desc": "Un solucionador de coloreado de grafos y optimización con restricciones que produce un horario completo y sin conflictos entre departamentos, aulas y cohortes.",
+      "next2Title": "Restricciones en lenguaje natural",
+      "next2Desc": "Decir que un docente no puede dar clase antes de las 10:00, o que un curso necesita un laboratorio de 40 plazas, y que se convierta en una regla formal que el solucionador aplica.",
+      "next3Title": "Decisiones que puedes cuestionar",
+      "next3Desc": "Cada asignación viene con el motivo por el que se tomó, para que un coordinador pueda cuestionar el horario en lugar de aceptarlo."
     },
     "attendance": {
       "eyebrow": "Asistencia",

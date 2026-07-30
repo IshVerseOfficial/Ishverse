@@ -21,6 +21,7 @@ export function RizeSiteHeader() {
   const links = [
     { href: "#features", label: t("nav.features") },
     { href: "#how-it-works", label: t("nav.howItWorks") },
+    { href: "#engine", label: t("nav.engine") },
     { href: "#audiences", label: t("nav.institutions") },
   ];
 

@@ -294,6 +294,7 @@
     "nav": {
       "features": "Fonctionnalités",
       "howItWorks": "Comment ça marche",
+      "engine": "Moteur",
       "institutions": "Pour les institutions",
       "signIn": "Connexion",
       "requestDemo": "Demander une démo",
@@ -308,6 +309,16 @@
       "trustImport": "Importe Excel et PDF",
       "trustRealtime": "Collaboration en temps réel",
       "trustReview": "Validation humaine avant publication"
+    },
+    "grid": {
+      "day1": "Lun",
+      "day2": "Mar",
+      "day3": "Mer",
+      "day4": "Jeu",
+      "day5": "Ven",
+      "legendPlaced": "Séance programmée",
+      "legendMoving": "En cours de déplacement",
+      "legendFree": "Créneau libre"
     },
     "problem": {
       "eyebrow": "Le statu quo",
@@ -345,6 +356,32 @@
       "item4Desc": "Identifiez les salles disponibles, les créneaux libres et les espaces inutilisés par période — avant qu'ils ne deviennent des problèmes.",
       "item5Title": "Hub coordinateur",
       "item5Desc": "Équilibre de la charge d'enseignement, propriété des cours et gestion des enseignants — en libre-service pour les départements, sans passer par l'administration centrale."
+    },
+    "engine": {
+      "eyebrow": "Sous le capot",
+      "heading": "Quatre moteurs à l'œuvre.",
+      "intro": "IshRize n'est pas un tableur avec une plus belle interface. Chaque partie du problème d'emploi du temps est traitée par un moteur dédié, et tous travaillent sur les mêmes données en direct.",
+      "engine1Name": "INGESTION",
+      "engine1Title": "Lit les emplois du temps que vous avez déjà",
+      "engine1Desc": "Un analyseur positionnel qui reconstruit la grille de l'emploi du temps à partir des coordonnées du texte sur la page, pour que les PDF universitaires denses et multicolonnes arrivent sous forme de créneaux structurés plutôt que de lignes désordonnées.",
+      "engine2Name": "CONFLITS",
+      "engine2Title": "Sait ce qui ne peut pas coexister",
+      "engine2Desc": "Salles réservées deux fois, chevauchements d'enseignants et collisions de cohortes entre départements, évalués en continu pendant que l'emploi du temps change plutôt que lors d'un contrôle final.",
+      "engine3Name": "DISPONIBILITÉ",
+      "engine3Title": "Trouve l'espace que vous ignoriez avoir",
+      "engine3Desc": "Salles libres, créneaux ouverts et salles inutilisées pendant tout un semestre, affichés à la demande et filtrés par capacité et par département.",
+      "engine4Name": "TEMPS RÉEL",
+      "engine4Title": "Garde tout le monde sur le même emploi du temps",
+      "engine4Desc": "Chaque modification est diffusée via un socket en direct. Deux coordinateurs qui travaillent en même temps voient le travail de l'autre immédiatement, sans rechargement ni copies contradictoires.",
+      "nextBadge": "En développement",
+      "nextHeading": "Le solveur d'emploi du temps",
+      "nextIntro": "La détection est résolue. La génération est ce que nous construisons maintenant : faire de l'emploi du temps quelque chose que l'on décrit plutôt que quelque chose que l'on assemble.",
+      "next1Title": "Génération sous contraintes",
+      "next1Desc": "Un solveur de coloration de graphes et d'optimisation sous contraintes qui produit un emploi du temps complet et sans conflit entre départements, salles et cohortes.",
+      "next2Title": "Des contraintes en langage naturel",
+      "next2Desc": "Dire qu'un enseignant ne peut pas donner cours avant 10 h, ou qu'un cours a besoin d'un laboratoire de 40 places, et que cela devienne une règle formelle appliquée par le solveur.",
+      "next3Title": "Des décisions que l'on peut contester",
+      "next3Desc": "Chaque placement s'accompagne de la raison qui l'a motivé, pour qu'un coordinateur puisse contester l'emploi du temps au lieu de le subir."
     },
     "attendance": {
       "eyebrow": "Présences",
