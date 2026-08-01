@@ -46,11 +46,13 @@ export async function generateMetadata({
       url: rizeConfig.url,
       siteName: rizeConfig.name,
       locale,
+      images: [{ url: "/api/og/rize", width: 1200, height: 630 }],
     },
     twitter: {
-      card: "summary",
+      card: "summary_large_image",
       title,
       description: t("description"),
+      images: ["/api/og/rize"],
     },
   };
 }
