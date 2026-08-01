@@ -21,6 +21,7 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { siteConfig } from "@/lib/site";
+import { Analytics } from "@vercel/analytics/next";
 import { Providers } from "../providers";
 import "../globals.css";
 
@@ -59,8 +60,14 @@ export async function generateMetadata({
       url: siteConfig.url,
       siteName: siteConfig.name,
       locale,
+      images: [{ url: "/api/og/company", width: 1200, height: 630 }],
     },
-    twitter: { card: "summary_large_image", title, description: t("description") },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: t("description"),
+      images: ["/api/og/company"],
+    },
   };
 }
 
@@ -81,6 +88,7 @@ export default async function LocaleLayout({
       <body className="min-h-screen bg-bg text-fg">
         <NextIntlClientProvider messages={messages}>
           <Providers>{children}</Providers>
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
