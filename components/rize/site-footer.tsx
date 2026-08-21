@@ -34,7 +34,7 @@ export function RizeSiteFooter() {
         { label: "IshVerse", href: "https://ishverse.com" },
         { label: t("footer.linkPrivacy"), href: "https://ishverse.com/privacy" },
         { label: t("footer.linkTerms"), href: "https://ishverse.com/terms" },
-        { label: t("footer.linkSupport"), href: `mailto:${siteConfig.supportEmail}` },
+        { label: t("footer.linkSupport"), href: "/support" },
       ],
     },
   ];
