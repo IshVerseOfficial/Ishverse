@@ -23,6 +23,7 @@ export function RizeSiteHeader() {
     { href: "#how-it-works", label: t("nav.howItWorks") },
     { href: "#engine", label: t("nav.engine") },
     { href: "#audiences", label: t("nav.institutions") },
+    { href: "/pricing", label: t("footer.linkPricing") },
   ];
 
   return (
