@@ -61,8 +61,31 @@ export default async function RizeHome({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   setRequestLocale(locale);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: rizeConfig.name,
+    description: rizeConfig.description,
+    url: rizeConfig.url,
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web, iOS, Android",
+    offers: [
+      { "@type": "Offer", price: "0", priceCurrency: "USD", name: "Free" },
+      { "@type": "Offer", price: "29", priceCurrency: "USD", name: "Pro" },
+    ],
+    publisher: {
+      "@type": "Organization",
+      name: "IshVerse",
+      url: "https://ishverse.com",
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <RizeSiteHeader />
       <main>
         <RizeHero />

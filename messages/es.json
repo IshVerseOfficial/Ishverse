@@ -431,12 +431,91 @@
       "ctaIshverse": "Conocer IshVerse"
     },
     "footer": {
-      "groupProduct": "Producto",
-      "groupCompany": "Empresa",
-      "linkPrivacy": "Privacidad",
-      "linkTerms": "Términos",
-      "linkSupport": "Soporte",
-      "rights": "Todos los derechos reservados."
+      "groupProduct": "Product",
+      "groupCompany": "Company",
+      "linkPricing": "Pricing",
+      "linkChangelog": "Changelog",
+      "linkCaseStudy": "Case study",
+      "linkPrivacy": "Privacy",
+      "linkTerms": "Terms",
+      "linkSupport": "Support",
+      "rights": "All rights reserved."
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "heading": "Simple pricing that scales with you.",
+      "sub": "Start free. Upgrade when your institution needs more.",
+      "free": {
+        "name": "Free",
+        "desc": "For small departments getting started.",
+        "f1": "Up to 5 activities on the timetable",
+        "f2": "Basic schedule view and filtering",
+        "f3": "Manual session creation",
+        "f4": "QR attendance marking"
+      },
+      "pro": {
+        "name": "Pro",
+        "desc": "For departments that need full scheduling intelligence.",
+        "f1": "Unlimited activities and bookings",
+        "f2": "Automated clash detection and resolution",
+        "f3": "Auto-session generation from timetable",
+        "f4": "Attendance analytics and trends",
+        "f5": "Multi-layer attendance verification",
+        "f6": "Student self-growth insights"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "For institutions managing multiple departments.",
+        "f1": "Everything in Pro",
+        "f2": "Multi-organization support",
+        "f3": "Custom branding and configuration",
+        "f4": "Priority support and onboarding",
+        "f5": "Dedicated account manager",
+        "f6": "Custom integrations and API access"
+      },
+      "forever": "forever",
+      "perMonth": "/ month",
+      "getStarted": "Get started",
+      "requestDemo": "Request a demo",
+      "talkToUs": "Talk to us",
+      "mostPopular": "Most popular",
+      "faq": {
+        "heading": "Questions",
+        "q1": "Can I switch plans later?",
+        "a1": "Yes. You can upgrade or downgrade at any time. Changes take effect at the start of the next billing cycle.",
+        "q2": "Is there a contract?",
+        "a2": "No. All plans are month-to-month. Cancel anytime.",
+        "q3": "What payment methods do you accept?",
+        "a3": "We accept all major credit and debit cards. Enterprise customers can pay by invoice.",
+        "q4": "Do you offer discounts for education?",
+        "a4": "Yes. Accredited educational institutions receive a 20% discount on Pro plans. Contact us for details."
+      }
+    },
+    "changelog": {
+      "eyebrow": "Changelog",
+      "heading": "What's new in IshRize",
+      "sub": "A timeline of releases, improvements, and fixes."
+    },
+    "caseStudy": {
+      "eyebrow": "Case study",
+      "heading": "How UG Mathematics replaced spreadsheets with IshRize",
+      "sub": "The University of Ghana's Department of Mathematics was the first to adopt IshRize for scheduling and attendance.",
+      "challengeHeading": "The challenge",
+      "challengeBody": "Before IshRize, the department managed timetables for 40+ courses across multiple lecture halls using a shared spreadsheet. Clashes were discovered the morning of lectures. Attendance was tracked by passing around a paper sign-in sheet — easy to forge, impossible to analyze.",
+      "solutionHeading": "The solution",
+      "solutionBody": "IshRize replaced the spreadsheet with a constraint-aware scheduling engine. The coordinator imports courses, venues, and time slots, and the system generates a clash-free timetable in seconds. Lecturers start sessions from their phones. Students scan a rotating QR code to mark attendance — no paper, no proxies.",
+      "resultHeading": "The results",
+      "result1Title": "Zero scheduling clashes",
+      "result1Desc": "The constraint solver eliminates double-bookings before they happen.",
+      "result2Title": "85% average attendance rate",
+      "result2Desc": "Up from an estimated 60% when tracking was manual and inconsistent.",
+      "result3Title": "Hours saved per week",
+      "result3Desc": "The coordinator no longer spends half a day resolving timetable conflicts.",
+      "result4Title": "Real-time visibility",
+      "result4Desc": "Department heads see attendance trends across all courses on a single dashboard.",
+      "quoteBody": "We used to find out about a room clash when two lecturers showed up at the same door. Now the system won't let it happen.",
+      "quoteAuthor": "Department Coordinator",
+      "quoteOrg": "University of Ghana, Department of Mathematics"
     }
   }
 }
